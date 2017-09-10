@@ -1,8 +1,8 @@
 <template>
   <v-layout column justify-center align-center>
-    <v-flex xs12 sm8 md6>
+    <v-flex xs12>
       <div class="text-xs-center">
-        <img src="/v.png" alt="Vuetify.js" class="mb-5" />
+        <img src="/csrlogo1.svg" alt="Cambridge Serviced Rooms" class="mb-5" />
       </div>
       <v-card>
         <v-card-title class="headline">Welcome to the Vuetify + Nuxt.js template</v-card-title>

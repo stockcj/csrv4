@@ -1,0 +1,11 @@
+.page-enter-active, .page-leave-active {
+  transition: opacity .5s;
+}
+.page-enter, .page-leave-to {
+  opacity: 0;
+}
+.primary-layout {
+  background: url(~static/slant.svg)50% 0;
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
