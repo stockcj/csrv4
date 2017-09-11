@@ -8,10 +8,8 @@
 export default {
   props: ['id'],
   computed: {
-    room ($route) {
-      const par = $route.params.id
-      return par
-      // return this.$store.getters.getRoom(params.id)
+    room () {
+      return this.$store.getters.getRoom(this.$route.params.id)
     }
   }
 }
