@@ -45,8 +45,10 @@
         clipped: false,
         drawer: false,
         items: [
-          { to: '/', title: 'Welcome', icon: 'apps' },
-          { to: '/inspire', title: 'Inspire', icon: 'bubble_chart' }
+          { to: '/', title: 'Home', icon: 'home' },
+          { to: '/inspire', title: 'Inspire', icon: 'bubble_chart' },
+          { to: '/properties/coronation-street', title: 'Coronation Street', icon: 'home' },
+          { to: '/properties/fair-street', title: 'Fair Street', icon: 'home' }
         ],
         miniVariant: false,
         title: 'Cambridge Serviced Rooms'

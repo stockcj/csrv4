@@ -13,8 +13,15 @@ export default {
     rooms () {
       return this.$store.getters.getRooms
     }
+  },
+  methods: {
+    fetchRooms: function () {
+      this.$store.dispatch('loadRooms', 'cs')
+    }
+  },
+  created () {
+    this.fetchRooms()
   }
-
 }
 </script>
 

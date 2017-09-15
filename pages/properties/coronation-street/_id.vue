@@ -1,16 +1,23 @@
 <template>
   <div>
-    <p class="headline">Coronation Street - {{ room }}</p>
+    <p class="headline">Coronation Street - {{ room.name }}</p>
   </div>
 </template>
 
 <script>
 export default {
-  props: ['id'],
   computed: {
     room () {
       return this.$store.getters.getRoom(this.$route.params.id)
     }
+  },
+  methods: {
+    fetchRooms: function () {
+      this.$store.dispatch('loadRooms', 'cs')
+    }
+  },
+  created () {
+    this.fetchRooms()
   }
 }
 </script>

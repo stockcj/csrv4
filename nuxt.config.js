@@ -19,6 +19,19 @@ module.exports = {
     '~/assets/style/app.styl',
     '~/assets/style/main.css'
   ],
+  generate: {
+    routes: [
+      '/properties/coronation-street/battersby',
+      '/properties/coronation-street/barlow',
+      '/properties/coronation-street/bishop',
+      '/properties/coronation-street/duckworth',
+      '/properties/coronation-street/tanner',
+      '/properties/coronation-street/tilsley',
+      '/properties/fair-street/alpha',
+      '/properties/fair-street/bravo',
+      '/properties/fair-street/charlie'
+    ]
+  },
   /*
   ** Customize the progress-bar color
   */
