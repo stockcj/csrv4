@@ -46,10 +46,10 @@
         drawer: false,
         items: [
           { to: '/', title: 'Home', icon: 'home' },
-          { to: '/inspire', title: 'Inspire', icon: 'bubble_chart' },
-          { to: '/properties/coronation-street', title: 'Coronation Street', icon: 'home' },
-          { to: '/properties/fair-street', title: 'Fair Street', icon: 'home' },
-          { to: '/reviews', title: 'Reviews', icon: 'format_quote' }
+          { to: '/coronation-street', title: 'Coronation Street', icon: 'hotel' },
+          { to: '/fair-street', title: 'Fair Street', icon: 'hotel' },
+          { to: '/reviews', title: 'Reviews', icon: 'format_quote' },
+          { to: '/contact', title: 'Contact Us', icon: 'email' }
         ],
         miniVariant: false,
         title: 'Cambridge Serviced Rooms'

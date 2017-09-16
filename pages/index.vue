@@ -22,8 +22,7 @@
         </v-card-text>
         <v-card-actions>
           <v-spacer></v-spacer>
-          <v-btn primary flat nuxt to="/inspire">Continue</v-btn>
-          <v-btn primary @click="getRooms">Get Rooms</v-btn>
+          <v-btn primary flat nuxt to="/reviews">Continue</v-btn>
         </v-card-actions>
       </v-card>
     </v-flex>
@@ -32,10 +31,6 @@
 
 <script>
 export default {
-  methods: {
-    getRooms: function () {
-      this.$store.dispatch('loadAllRooms')
-    }
-  }
+  layout: 'home'
 }
 </script>

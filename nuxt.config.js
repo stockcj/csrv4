@@ -21,15 +21,15 @@ module.exports = {
   ],
   generate: {
     routes: [
-      '/properties/coronation-street/battersby',
-      '/properties/coronation-street/barlow',
-      '/properties/coronation-street/bishop',
-      '/properties/coronation-street/duckworth',
-      '/properties/coronation-street/tanner',
-      '/properties/coronation-street/tilsley',
-      '/properties/fair-street/alpha',
-      '/properties/fair-street/bravo',
-      '/properties/fair-street/charlie'
+      '/coronation-street/battersby',
+      '/coronation-street/barlow',
+      '/coronation-street/bishop',
+      '/coronation-street/duckworth',
+      '/coronation-street/tanner',
+      '/coronation-street/tilsley',
+      '/fair-street/alpha',
+      '/fair-street/bravo',
+      '/fair-street/charlie'
     ]
   },
   /*

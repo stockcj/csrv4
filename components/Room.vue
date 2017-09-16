@@ -1,6 +1,6 @@
 <template>
   <div>
-    <p class="headline">{{ room.name }}</p>
+    <p class="headline">{{room.houseName}} - {{ room.name }}</p>
   </div>
 </template>
 
@@ -15,7 +15,7 @@ export default {
   methods: {
     fetchRooms: function () {
       const path = this.$route.path
-      const property = path.split('/')[2]
+      const property = path.split('/')[1]
       this.$store.dispatch('loadRooms', property)
     }
   },
