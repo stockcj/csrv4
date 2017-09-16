@@ -23,8 +23,19 @@
         <v-card-actions>
           <v-spacer></v-spacer>
           <v-btn primary flat nuxt to="/inspire">Continue</v-btn>
+          <v-btn primary @click="getRooms">Get Rooms</v-btn>
         </v-card-actions>
       </v-card>
     </v-flex>
   </v-layout>
 </template>
+
+<script>
+export default {
+  methods: {
+    getRooms: function () {
+      this.$store.dispatch('loadAllRooms')
+    }
+  }
+}
+</script>

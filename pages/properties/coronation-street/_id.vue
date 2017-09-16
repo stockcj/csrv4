@@ -1,23 +1,15 @@
 <template>
   <div>
-    <p class="headline">Coronation Street - {{ room.name }}</p>
+    <room />
   </div>
 </template>
 
 <script>
+import Room from '~/components/Room.vue'
+
 export default {
-  computed: {
-    room () {
-      return this.$store.getters.getRoom(this.$route.params.id)
-    }
-  },
-  methods: {
-    fetchRooms: function () {
-      this.$store.dispatch('loadRooms', 'cs')
-    }
-  },
-  created () {
-    this.fetchRooms()
+  components: {
+    Room
   }
 }
 </script>

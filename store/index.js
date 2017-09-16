@@ -1,16 +1,12 @@
+import * as contentful from 'contentful'
+
+const client = contentful.createClient({
+  space: 'kgtv9xl00xvv',
+  accessToken: 'fcd35c914f35cc85c29388c38f4c48593a22da86586fcd1159a8905238da0db3'
+})
+
 export const state = () => ({
   sidebar: false,
-  rooms: [
-    { id: 'barlow', name: 'Barlow', house: 'cs' },
-    { id: 'battersby', name: 'Battersby', house: 'cs' },
-    { id: 'bishop', name: 'Bishop', house: 'cs' },
-    { id: 'duckworth', name: 'Duckworth', house: 'cs' },
-    { id: 'tanner', name: 'Tanner', house: 'cs' },
-    { id: 'tilsley', name: 'Tilsley', house: 'cs' },
-    { id: 'alpha', name: 'Alpha', house: 'fs' },
-    { id: 'bravo', name: 'Bravo', house: 'fs' },
-    { id: 'charlie', name: 'Charlie', house: 'fs' }
-  ],
   houseRooms: []
 })
 
@@ -26,21 +22,23 @@ export const mutations = {
 export const actions = {
   loadRooms ({commit, state}, payload) {
     const house = payload
-    const rooms = state.rooms
-    const pRooms = []
-    for (let room of rooms) {
-      if (room.house === house) {
-        pRooms.push(room)
-      }
-    }
-    commit('setRooms', pRooms)
+    client.getEntries({
+      'content_type': 'room',
+      'order': 'fields.number'
+    })
+      .then((data) => {
+        const rooms = []
+        data.items.forEach((room) => {
+          if (room.fields.houseId === house) {
+            rooms.push(room.fields)
+          }
+        })
+        commit('setRooms', rooms)
+      })
   }
 }
 
 export const getters = {
-  getAllRooms (state) {
-    return state.rooms
-  },
   getRooms (state) {
     return state.houseRooms
   },
