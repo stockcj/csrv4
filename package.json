@@ -10,8 +10,10 @@
     "generate": "nuxt generate"
   },
   "dependencies": {
+    "animated-vue": "^0.5.3",
     "contentful": "^4.6.1",
     "nuxt": "^1.0.0-rc6",
+    "vue-scrollmonitor": "0.0.2",
     "vuetify": "^0.15.2"
   },
   "devDependencies": {

@@ -14,7 +14,10 @@ module.exports = {
       { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons' }
     ]
   },
-  plugins: ['~/plugins/vuetify.js'],
+  plugins: [
+    '~/plugins/vuetify.js',
+    '~/plugins/vue-scrollmonitor.js'
+  ],
   css: [
     '~/assets/style/app.styl',
     '~/assets/style/main.css'
@@ -40,7 +43,7 @@ module.exports = {
   ** Build configuration
   */
   build: {
-    vendor: ['vuetify'],
+    vendor: ['vuetify', 'vue-scrollmonitor'],
     extractCSS: true,
     /*
     ** Run ESLINT on save
