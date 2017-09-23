@@ -9,22 +9,18 @@
       </v-toolbar-items>
     </v-toolbar>
     <v-parallax src="/backs.jpg" style="height: auto;">
-      <v-layout column align-center justify-center>
-        <img src="/csrlogo1_small.svg" alt="Cambridge Serviced Rooms" class="mt-5 mb-4 hidden-sm-and-up" />
-        <img src="/csrlogo1.svg" alt="Cambridge Serviced Rooms" class="mt-5 mb-4 hidden-xs-only" />
-        <div class="text-xs-center mb-5">
-          <h2 class="white--text">Cambridge Serviced Rooms</h2>
-          <v-flex xs8 offset-xs2>
-            <h4 class="white--text"><span class="thin">We offer</span> fully serviced, centrally located, luxury accommodation<span class="thin"> in the city of Cambridge.</span></h4>
+        <v-layout column align-center>
+          <v-flex xs12>
+            <img src="/csrlogo1.svg" alt="Cambridge Serviced Rooms" class="mt-5 mb-5 hidden-sm-and-up" />
+            <img src="/csrlogo1.svg" alt="Cambridge Serviced Rooms" class="mt-5 mb-5 hidden-xs-only" style="height:400px;"/>
           </v-flex>
-        </div>      
-      </v-layout>
+        </v-layout>
     </v-parallax>
-    <main class="home">
+    <main class="home camblue">
       <nuxt />
     </main>
-    <v-footer>
-      <span>&copy; 2017</span>
+    <v-footer class="grey darken-3">
+      <span class="white--text">&copy; 2017</span>
     </v-footer>
   </v-app>
 </template>

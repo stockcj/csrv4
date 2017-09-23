@@ -8,6 +8,7 @@ $theme := {
   warning: #ffb300
   error: #B71C1C
   success: #2E7D32
+  camblue: #91B9A4
 }
 
 // Import Vuetify styling
@@ -32,3 +33,10 @@ $theme := {
   height 2px
   margin 25px auto
   background-color black
+
+.fade-enter-active, .fade-leave-active {
+  transition: opacity .5s
+}
+.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+  opacity: 0
+}
