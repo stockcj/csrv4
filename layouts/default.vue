@@ -1,9 +1,8 @@
 <template>
   <v-app light>
     <v-navigation-drawer
-      persistent
-      :mini-variant="miniVariant"
-      :clipped="clipped"
+      right
+      temporary
       v-model="drawer"
       enable-resize-watcher
     >
@@ -23,9 +22,25 @@
       </v-list>
     </v-navigation-drawer>
     <v-toolbar fixed>
-      <v-toolbar-side-icon @click.stop="drawer = !drawer"></v-toolbar-side-icon>
-      <v-toolbar-title v-text="title"></v-toolbar-title>
+      <img src="/csrlogo1_icon.svg" alt="Cambridge Serviced Rooms" style="height:48px;"/>
+      <v-toolbar-title><nuxt-link tag="span" style="cursor: pointer" to="/">{{title}}</nuxt-link></v-toolbar-title>
       <v-spacer></v-spacer>
+      <v-toolbar-items class="hidden-sm-and-down">
+        <v-menu open-on-hover bottom offset-y>
+          <v-btn flat slot="activator">Properties</v-btn>
+          <v-list>
+            <v-list-tile router :to="'/coronation-street'">
+              <v-list-tile-title>Coronation Street</v-list-tile-title>
+            </v-list-tile>
+            <v-list-tile router :to="'/fair-street'">
+              <v-list-tile-title>Fair Street</v-list-tile-title>
+            </v-list-tile>
+          </v-list>
+        </v-menu>
+        <v-btn flat to="/reviews">Reviews</v-btn>
+        <v-btn flat to="/contact">Contact Us</v-btn>
+      </v-toolbar-items>
+      <v-toolbar-side-icon class="hidden-md-and-up" @click.stop="drawer = !drawer"></v-toolbar-side-icon>
     </v-toolbar>
     <main>
       <v-container fluid class="primary-layout">
@@ -42,7 +57,6 @@
   export default {
     data () {
       return {
-        clipped: false,
         drawer: false,
         items: [
           { to: '/', title: 'Home', icon: 'home' },
@@ -51,7 +65,6 @@
           { to: '/reviews', title: 'Reviews', icon: 'format_quote' },
           { to: '/contact', title: 'Contact Us', icon: 'email' }
         ],
-        miniVariant: false,
         title: 'Cambridge Serviced Rooms'
       }
     }

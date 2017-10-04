@@ -3,10 +3,23 @@
     <v-toolbar :class="[toolbar ? 'toolbar--home' : 'hidden']" fixed>
       <img src="/csrlogo1_icon.svg" alt="Cambridge Serviced Rooms" style="height:48px;"/>
       <v-spacer></v-spacer>
-      <v-toolbar-items>
+      <v-toolbar-items class="hidden-sm-and-down">
+        <v-menu open-on-hover bottom offset-y>
+          <v-btn flat slot="activator">Properties</v-btn>
+          <v-list>
+            <v-list-tile router :to="'/coronation-street'">
+              <v-list-tile-title>Coronation Street</v-list-tile-title>
+            </v-list-tile>
+            <v-list-tile router :to="'/fair-street'">
+              <v-list-tile-title>Fair Street</v-list-tile-title>
+            </v-list-tile>
+          </v-list>
+        </v-menu>
         <v-btn flat to="/reviews">Reviews</v-btn>
         <v-btn flat to="/contact">Contact Us</v-btn>
       </v-toolbar-items>
+      <v-toolbar-side-icon class="hidden-md-and-up" @click.stop="drawer = !drawer"></v-toolbar-side-icon>
+    </v-toolbar>
     </v-toolbar>
     <v-parallax src="/backs.jpg" style="height: auto;">
         <v-layout column align-center>

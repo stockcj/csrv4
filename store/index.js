@@ -30,7 +30,11 @@ export const actions = {
         const rooms = []
         data.items.forEach((room) => {
           if (room.fields.houseId === house) {
-            rooms.push(room.fields)
+            rooms.push({
+              id: room.fields.id,
+              name: room.fields.name,
+              titleImage: 'https:' + room.fields.titleImage.fields.file.url
+            })
           }
         })
         commit('setRooms', rooms)
