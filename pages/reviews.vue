@@ -48,27 +48,6 @@ export default {
         return ({'small': true})
       }
     },
-    xsize () {
-      if (this.$vuetify.breakpoint.lgAndUp) {
-        return true
-      } else {
-        return false
-      }
-    },
-    lsize () {
-      if (this.$vuetify.breakpoint.md) {
-        return true
-      } else {
-        return false
-      }
-    },
-    msize () {
-      if (this.$vuetify.breakpoint.sm) {
-        return true
-      } else {
-        return false
-      }
-    },
     reviews () {
       return this.$store.getters.getReviews
     }
