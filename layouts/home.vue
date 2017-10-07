@@ -1,5 +1,26 @@
 <template>
   <v-app light>
+    <v-navigation-drawer
+      right
+      temporary
+      v-model="drawer"
+      enable-resize-watcher
+    >
+      <v-list>
+        <v-list-tile
+          v-for="(item, i) in items"
+          :key="i"
+          :to="item.to"
+          >
+            <v-list-tile-action>
+              <v-icon v-html="item.icon"></v-icon>
+            </v-list-tile-action>
+            <v-list-tile-content>
+              <v-list-tile-title v-text="item.title"></v-list-tile-title>
+            </v-list-tile-content>
+          </v-list-tile>
+      </v-list>
+    </v-navigation-drawer>
     <v-toolbar :class="[toolbar ? 'toolbar--home' : 'hidden']" fixed>
       <img src="/csrlogo1_icon.svg" alt="Cambridge Serviced Rooms" style="height:48px;"/>
       <v-spacer></v-spacer>
@@ -42,8 +63,16 @@
   export default {
     data () {
       return {
+        drawer: false,
         toolbar: false,
-        title: 'Cambridge Serviced Rooms'
+        title: 'Cambridge Serviced Rooms',
+        items: [
+          { to: '/', title: 'Home', icon: 'home' },
+          { to: '/coronation-street', title: 'Coronation Street', icon: 'hotel' },
+          { to: '/fair-street', title: 'Fair Street', icon: 'hotel' },
+          { to: '/reviews', title: 'Reviews', icon: 'format_quote' },
+          { to: '/contact', title: 'Contact Us', icon: 'email' }
+        ]
       }
     },
     mounted () {

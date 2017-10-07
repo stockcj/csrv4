@@ -33,10 +33,12 @@ export const actions = {
             rooms.push({
               id: room.fields.id,
               name: room.fields.name,
+              features: room.fields.features,
               titleImage: 'https:' + room.fields.titleImage.fields.file.url
             })
           }
         })
+        console.log(rooms)
         commit('setRooms', rooms)
       })
   }
