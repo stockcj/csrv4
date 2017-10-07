@@ -1,13 +1,11 @@
-import * as contentful from 'contentful'
+import {createClient} from '~/plugins/contentful.js'
 
-const client = contentful.createClient({
-  space: 'kgtv9xl00xvv',
-  accessToken: 'fcd35c914f35cc85c29388c38f4c48593a22da86586fcd1159a8905238da0db3'
-})
+const client = createClient()
 
 export const state = () => ({
   sidebar: false,
-  houseRooms: []
+  houseRooms: [],
+  reviews: []
 })
 
 export const mutations = {
@@ -16,6 +14,9 @@ export const mutations = {
   },
   setRooms (state, payload) {
     state.houseRooms = payload
+  },
+  setReviews (state, payload) {
+    state.reviews = payload
   }
 }
 
@@ -38,8 +39,20 @@ export const actions = {
             })
           }
         })
-        console.log(rooms)
         commit('setRooms', rooms)
+      })
+  },
+  loadReviews ({commit, state}) {
+    client.getEntries({
+      'content_type': 'review',
+      'order': 'fields.id'
+    })
+      .then((data) => {
+        const reviews = []
+        data.items.forEach((review) => {
+          reviews.push(review.fields)
+        })
+        commit('setReviews', reviews)
       })
   }
 }
@@ -54,5 +67,8 @@ export const getters = {
         return room.id === roomId
       })
     }
+  },
+  getReviews (state) {
+    return state.reviews
   }
 }
