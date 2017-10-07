@@ -16,8 +16,8 @@
                     <v-flex xs10>
                       {{review.text}}
                     </v-flex>
-                    <v-flex xs1>
-                      <v-icon v-bind="size">format_quote</v-icon>
+                    <v-flex xs1 style="position: relative;">
+                      <v-icon v-bind="size" style="position: absolute; bottom: 0;">format_quote</v-icon>
                     </v-flex>
                   </v-layout>
                 </v-card-text>
