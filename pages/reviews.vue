@@ -11,13 +11,13 @@
                 <v-card-text class="headline p3">
                   <v-layout>
                     <v-flex xs1>
-                      <v-icon class="icon-flipped">format_quote</v-icon>
+                      <v-icon :medium="msize" :large="lsize" :x-large="xsize" class="icon-flipped">format_quote</v-icon>
                     </v-flex>
                     <v-flex xs10>
                       {{review.text}}
                     </v-flex>
                     <v-flex xs1>
-                      <v-icon x-large>format_quote</v-icon>
+                      <v-icon :medium="msize" :large="lsize" :x-large="xsize">format_quote</v-icon>
                     </v-flex>
                   </v-layout>
                 </v-card-text>
@@ -36,12 +36,28 @@
 
 <script>
 export default {
-  data () {
-    return {
-      size: 'large'
-    }
-  },
   computed: {
+    xsize () {
+      if (this.$vuetify.breakpoint.lgAndUp) {
+        return true
+      } else {
+        return false
+      }
+    },
+    lsize () {
+      if (this.$vuetify.breakpoint.md) {
+        return true
+      } else {
+        return false
+      }
+    },
+    msize () {
+      if (this.$vuetify.breakpoint.sm) {
+        return true
+      } else {
+        return false
+      }
+    },
     reviews () {
       return this.$store.getters.getReviews
     }
