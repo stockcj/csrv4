@@ -4,7 +4,7 @@ const client = createClient()
 
 export const state = () => ({
   sidebar: false,
-  houseRooms: [],
+  rooms: [],
   reviews: []
 })
 
@@ -13,7 +13,10 @@ export const mutations = {
     state.sidebar = !state.sidebar
   },
   setRooms (state, payload) {
-    state.houseRooms = payload
+    state.rooms = payload
+  },
+  setRoom (state, payload) {
+    state.room = payload
   },
   setReviews (state, payload) {
     state.reviews = payload
@@ -21,8 +24,7 @@ export const mutations = {
 }
 
 export const actions = {
-  loadRooms ({commit, state}, payload) {
-    const house = payload
+  loadRooms ({commit, state}) {
     client.getEntries({
       'content_type': 'room',
       'order': 'fields.number'
@@ -30,14 +32,17 @@ export const actions = {
       .then((data) => {
         const rooms = []
         data.items.forEach((room) => {
-          if (room.fields.houseId === house) {
-            rooms.push({
-              id: room.fields.id,
-              name: room.fields.name,
-              features: room.fields.features,
-              titleImage: 'https:' + room.fields.titleImage.fields.file.url
-            })
-          }
+          rooms.push({
+            id: room.fields.id,
+            name: room.fields.name,
+            features: room.fields.features,
+            description: room.fields.description,
+            cost: room.fields.cost,
+            houseId: room.fields.houseId,
+            houseName: room.fields.houseName,
+            images: room.fields.images,
+            titleImage: 'https:' + room.fields.titleImage.fields.file.url
+          })
         })
         commit('setRooms', rooms)
       })
@@ -59,11 +64,18 @@ export const actions = {
 
 export const getters = {
   getRooms (state) {
-    return state.houseRooms
+    return state.rooms
   },
-  getRoom (state) {
+  getHouseRooms (state, houseId) {
+    return (houseId) => {
+      return state.rooms.filter((room) => {
+        return room.houseId === houseId
+      })
+    }
+  },
+  getRoom (state, roomId) {
     return (roomId) => {
-      return state.houseRooms.find((room) => {
+      return state.rooms.find((room) => {
         return room.id === roomId
       })
     }

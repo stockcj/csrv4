@@ -30,22 +30,15 @@
 </template>
 
 <script>
+
 export default {
   name: 'property',
   computed: {
     rooms () {
-      return this.$store.getters.getRooms
-    }
-  },
-  methods: {
-    fetchRooms: function () {
       const path = this.$route.path
       const property = path.match(/[^/]+$/g)[0]
-      this.$store.dispatch('loadRooms', property)
+      return this.$store.getters.getHouseRooms(property)
     }
-  },
-  created () {
-    this.fetchRooms()
   }
 }
 </script>

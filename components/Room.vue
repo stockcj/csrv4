@@ -11,16 +11,6 @@ export default {
     room () {
       return this.$store.getters.getRoom(this.$route.params.id)
     }
-  },
-  methods: {
-    fetchRooms: function () {
-      const path = this.$route.path
-      const property = path.split('/')[1]
-      this.$store.dispatch('loadRooms', property)
-    }
-  },
-  created () {
-    this.fetchRooms()
   }
 }
 </script>
