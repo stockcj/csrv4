@@ -1,15 +1,6 @@
 <template>
   <scroll-container @change="updateScrollState">
     <v-container fluid>
-      <!-- <v-layout column justify-center align-center>
-        <div class="text-xs-center mt-5 mb-5">
-          <v-flex xs8 offset-xs2>
-            <h3 class="white--text">Services</h
-            <h4 class="white--text"><span class="thin">Our properties are the perfect base for</span> working, studying<span class="thin">, or just </span>visiting
-              <span class="thin">Cambridge.</span></h4>
-          </v-flex>
-        </div>
-      </v-layout> -->
       <v-layout column>
         <v-flex xs12 md10 offset-md1>
           <v-container fluid grid-list-xl class="mt-4" style="min-height: 900px;">

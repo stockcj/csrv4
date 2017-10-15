@@ -24,6 +24,9 @@ module.exports = {
     '~/assets/style/app.styl',
     '~/assets/style/main.css'
   ],
+  router: {
+    middleware: 'load-rooms'
+  },
   generate: {
     routes: [
       '/coronation-street/battersby',
@@ -61,6 +64,7 @@ module.exports = {
       }
     }
   },
+  mode: 'spa',
   env: {
     CTF_SPACE_ID: config.CTF_SPACE_ID,
     CTF_CDA_ACCESS_TOKEN: config.CTF_CDA_ACCESS_TOKEN,

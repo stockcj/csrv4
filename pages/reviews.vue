@@ -52,13 +52,6 @@ export default {
       return this.$store.getters.getReviews
     }
   },
-  methods: {
-    fetchReviews: function () {
-      this.$store.dispatch('loadReviews')
-    }
-  },
-  created () {
-    this.fetchReviews()
-  }
+  middleware: 'load-reviews'
 }
 </script>
