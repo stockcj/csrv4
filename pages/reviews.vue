@@ -2,8 +2,8 @@
   <div>
     <v-layout>
       <v-flex xs12 sm10 offset-sm1>
-        <h2 class="text-xs-center mt-5">Reviews</h2>
-        <h3 class="text-xs-center thin mt-5">Read some of the things our lovely guests have had to say about Cambridge Serviced Rooms.</h3>
+        <h1 class="page-header white--text text-xs-center mt-5">Reviews</h1>
+        <h3 class="white--text text-xs-center thin mt-5">Read some of the things our lovely guests have had to say about Cambridge Serviced Rooms.</h3>
         <v-container class="mt-5" grid-list-xl>
           <v-layout row wrap>
             <v-flex xs12 v-for="review in reviews" :key="review.id">
@@ -14,7 +14,7 @@
                       <v-icon v-bind="size" class="icon-flipped">format_quote</v-icon>
                     </v-flex>
                     <v-flex xs10>
-                      {{review.text}}
+                      <p>{{review.text}}</p>
                     </v-flex>
                     <v-flex xs1 style="position: relative;">
                       <v-icon v-bind="size" style="position: absolute; bottom: 0;">format_quote</v-icon>

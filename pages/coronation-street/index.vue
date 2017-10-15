@@ -2,7 +2,7 @@
   <div>
     <v-layout>
       <v-flex xs12>
-        <h2 class="text-xs-center mt-5">Coronation Street</h2>
+        <h1 class="page-header white--text text-xs-center mt-5">Coronation Street</h1>
       </v-flex>
     </v-layout>
     <property />
