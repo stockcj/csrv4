@@ -51,7 +51,9 @@
         </v-layout>
     </v-parallax>
     <main class="home camblue">
-      <nuxt />
+      <v-content>
+        <nuxt />
+      </v-content>
     </main>
     <v-footer class="grey darken-3">
       <span class="white--text">&copy; 2017</span>

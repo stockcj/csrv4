@@ -21,7 +21,7 @@
         </v-list-tile>
       </v-list>
     </v-navigation-drawer>
-    <v-toolbar fixed>
+    <v-toolbar fixed app>
       <img src="/csrlogo1_icon.svg" alt="Cambridge Serviced Rooms" style="height:48px;"/>
       <v-toolbar-title><nuxt-link tag="span" style="cursor: pointer" to="/">{{title}}</nuxt-link></v-toolbar-title>
       <v-spacer></v-spacer>
