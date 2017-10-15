@@ -44,9 +44,7 @@
     </v-toolbar>
     <main>
       <v-content>
-        <v-container fluid class="primary-layout">
-          <nuxt />
-        </v-container>
+        <nuxt />
       </v-content>
     </main>
     <v-footer>

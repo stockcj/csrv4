@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <v-container fluid class="primary-layout">
     <v-layout>
       <v-flex xs12 sm10 offset-sm1>
         <h1 class="page-header white--text text-xs-center mt-5">Reviews</h1>
@@ -31,7 +31,7 @@
         </v-container>
       </v-flex>
     </v-layout>
-  </div>
+  </v-container>
 </template>
 
 <script>
