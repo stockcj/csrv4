@@ -43,9 +43,11 @@
       <v-toolbar-side-icon class="hidden-md-and-up" @click.stop="drawer = !drawer"></v-toolbar-side-icon>
     </v-toolbar>
     <main>
-      <v-container fluid class="primary-layout">
-        <nuxt />
-      </v-container>
+      <v-content>
+        <v-container fluid class="primary-layout">
+          <nuxt />
+        </v-container>
+      </v-content>
     </main>
     <v-footer>
       <span>&copy; 2017</span>

@@ -33,6 +33,12 @@ const createStore = () => {
           .then((data) => {
             const rooms = []
             data.items.forEach((room) => {
+              const images = []
+              if (room.fields.images) {
+                for (const img of room.fields.images) {
+                  images.push('http:' + img.fields.file.url)
+                }
+              }
               rooms.push({
                 id: room.fields.id,
                 name: room.fields.name,
@@ -41,7 +47,7 @@ const createStore = () => {
                 cost: room.fields.cost,
                 houseId: room.fields.houseId,
                 houseName: room.fields.houseName,
-                images: room.fields.images,
+                images: images,
                 titleImage: 'https:' + room.fields.titleImage.fields.file.url
               })
             })
