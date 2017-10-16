@@ -1,12 +1,24 @@
 <template>
-  <v-container fluid class="primary-layout">
-    <v-layout>
+  <div>
+    <v-layout class="hero-style" column align-center>
       <v-flex xs12>
-        <h1 class="page-header white--text text-xs-center mt-5">Fair Street</h1>
+        <img src="/csrlogo1.svg" alt="Cambridge Serviced Rooms" class="mt-5 mb-5 hidden-sm-and-up" style="height:200px;"/>
+        <img src="/csrlogo1.svg" alt="Cambridge Serviced Rooms" class="mt-5 mb-5 hidden-xs-only" style="height:400px;"/>
       </v-flex>
     </v-layout>
-    <property />
-  </v-container>
+    <v-container fluid class="camblue">
+      <v-layout column class="mt-3">
+        <v-flex xs12 lg6 offset-lg3>
+          <h1 class="page-header white--text text-xs-center mt-5">Fair Street</h1>
+          <div class="pa-3 mt-3 white--text text-xs-center">
+            <h5 class="thin">blurb</h5>
+            <h5 class="mt-4">blurb</h5>
+          </div>
+        </v-flex>
+      </v-layout>
+      <property />
+    </v-container>
+  </div>
 </template>
 
 <script>

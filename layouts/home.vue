@@ -45,8 +45,23 @@
     <v-parallax src="/backs.jpg" style="height: auto;">
         <v-layout column align-center>
           <v-flex xs12>
-            <img src="/csrlogo1.svg" alt="Cambridge Serviced Rooms" class="mt-5 mb-5 hidden-sm-and-up" />
+            <img src="/csrlogo1.svg" alt="Cambridge Serviced Rooms" class="mt-5 mb-5 hidden-sm-and-up" style="height:200px;"/>
             <img src="/csrlogo1.svg" alt="Cambridge Serviced Rooms" class="mt-5 mb-5 hidden-xs-only" style="height:400px;"/>
+          </v-flex>
+          <v-flex>
+            <v-menu open-on-hover bottom offset-y>
+              <v-btn large dark flat slot="activator">Properties</v-btn>
+              <v-list>
+                <v-list-tile router :to="'/coronation-street'">
+                  <v-list-tile-title>Coronation Street</v-list-tile-title>
+                </v-list-tile>
+                <v-list-tile router :to="'/fair-street'">
+                  <v-list-tile-title>Fair Street</v-list-tile-title>
+                </v-list-tile>
+              </v-list>
+            </v-menu>
+            <v-btn large dark flat to="/reviews">Reviews</v-btn>
+            <v-btn large dark flat to="/contact">Contact Us</v-btn>
           </v-flex>
         </v-layout>
     </v-parallax>
@@ -55,7 +70,7 @@
         <nuxt />
       </v-content>
     </main>
-    <v-footer class="grey darken-3">
+    <v-footer class="blue-grey darken-3">
       <span class="white--text">&copy; 2017</span>
     </v-footer>
   </v-app>

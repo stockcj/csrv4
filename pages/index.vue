@@ -5,17 +5,18 @@
         <v-flex xs12 md10 offset-md1>
           <v-container fluid grid-list-xl class="mt-4" style="min-height: 900px;">
             <v-layout row wrap align-items-center>
-              <v-flex xs12 md8 offset-md2 class="text-xs-center mb-5">
-                <h3 class="white--text"><span class="thin">We offer</span> fully serviced, centrally located, luxury accommodation<span class="thin"> in the city of Cambridge.</span></h3>
+              <v-flex xs12 lg8 offset-lg2 class="text-xs-center mb-5">
+                <h1 class="white--text page-header">Cambridge Serviced Rooms</h1>
+                <h3 class="white--text mt-5"><span class="thin">We offer</span> fully serviced, centrally located, luxury accommodation<span class="thin"> in the city of Cambridge.</span></h3>
               </v-flex>
               <scroll-item v-for="(item, i) in items" :id="i" :key="i">
-                <v-flex v-if="item.dir === 'left'" xs12 md7 class="text-xs-center mb-5 mt-5">
+                <v-flex v-if="item.dir === 'left'" xs12 lg7 class="text-xs-center mb-5 mt-5">
                   <div :class="`home-text ${state[i] && state[i].isBelowViewport ? 'hidden-left' : ''}`">
                     <h3>{{item.title}}</h3>
                     <h5 class="thin">{{item.text}}</h5>
                   </div>
                 </v-flex>
-                <v-flex v-else-if="item.dir === 'right'" xs12 md7 offset-md5 class="text-xs-center mb-5 mt-5">
+                <v-flex v-else-if="item.dir === 'right'" xs12 lg7 offset-lg5 class="text-xs-center mb-5 mt-5">
                   <div :class="`home-text ${state[i] && state[i].isBelowViewport ? 'hidden-right' : ''}`">
                     <h3>{{item.title}}</h3>
                     <h5 class="thin">{{item.text}}</h5>

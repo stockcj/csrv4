@@ -47,8 +47,8 @@
         <nuxt />
       </v-content>
     </main>
-    <v-footer>
-      <span>&copy; 2017</span>
+    <v-footer class="blue-grey darken-3">
+      <span class="white--text">&copy; 2017</span>
     </v-footer>
   </v-app>
 </template>

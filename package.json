@@ -14,6 +14,7 @@
     "contentful": "^4.6.1",
     "nuxt": "^1.0.0-rc6",
     "vue-scrollmonitor": "0.0.2",
+    "vue2-google-maps": "^0.8.3",
     "vuetify": "^0.16.6"
   },
   "devDependencies": {
