@@ -5,7 +5,7 @@
         <v-layout row wrap>
           <v-flex xs12 md6 v-for="room in rooms" :key="room.id">
             <v-card>
-              <v-card-media :src="room.titleImage" height="300">
+              <v-card-media :src="room.titleImage" height="400">
               </v-card-media>
               <v-card-title primary-title>
                 <div>
