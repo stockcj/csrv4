@@ -1,6 +1,6 @@
 <template>
   <div>
-    <v-layout class="hero-style" column align-center>
+    <v-layout class="hero-style" id="coronationStreet" column align-center>
       <v-flex xs12>
         <img src="/csrlogo1.svg" alt="Cambridge Serviced Rooms" class="mt-5 mb-5 hidden-sm-and-up" style="height:200px;"/>
         <img src="/csrlogo1.svg" alt="Cambridge Serviced Rooms" class="mt-5 mb-5 hidden-xs-only" style="height:400px;"/>
@@ -58,3 +58,9 @@ export default {
 
 }
 </script>
+
+<style>
+  #coronationStreet {
+    background-image: url('/lg2.jpg');
+  }
+</style>
