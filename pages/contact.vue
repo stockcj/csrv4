@@ -13,9 +13,11 @@
           <h3 class="white--text text-xs-center thin mt-5">If you think you might like to stay with us, great! You can send us an enquiry by submitting the form below.</h3>
         </v-flex>
         <v-flex xs12 sm8 offset-sm2 md6 offset-md3 class="mt-3">
-          <v-card>
+          <v-card id="contactCard">
+            <v-form>
+            <v-container>
             <v-card-title>
-
+              <h3 class="headline">Enquiry Form</h3>
             </v-card-title>
             <v-card-text>
               <v-layout row wrap>
@@ -80,8 +82,14 @@
               </v-layout>
             </v-card-text>
             <v-card-actions>
-
+              <v-layout class="text-xs-center">
+                <v-flex xs12>
+                  <v-btn primary raised large type="submit">Submit</v-btn>
+                </v-flex>
+              </v-layout>
             </v-card-actions>
+            </v-container>
+            </v-form>
           </v-card>
         </v-flex>
       </v-layout>
