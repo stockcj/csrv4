@@ -13,7 +13,7 @@
           <h3 class="white--text text-xs-center thin mt-5">If you think you might like to stay with us, great! You can send us an enquiry by submitting the form below.</h3>
         </v-flex>
         <v-flex xs12 sm8 offset-sm2 md6 offset-md3 class="mt-3">
-          <v-card id="contactCard">
+          <v-card id="contactCard" class="mb-5">
             <v-form>
             <v-container>
             <v-card-title>
