@@ -15,6 +15,10 @@
         <v-flex xs12 sm8 offset-sm2 md6 offset-md3 class="mt-3">
           <v-card id="contactCard" class="mb-5">
             <form action="http://formspree.io/info@cambridgeservicedrooms.com" method="POST">
+            <input type="hidden" name="_subject" value="CSR Enquiry">
+            <input type="hidden" name="_next" value="/thanks#thanks">
+            <input type="text" name="_format" value="plain" style="display:none">
+            <input type="text" name="_gotcha" style="display:none;">
             <v-container>
             <v-card-title>
               <h3 class="headline">Enquiry Form</h3>
