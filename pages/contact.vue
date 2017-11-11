@@ -29,10 +29,12 @@
                   <v-text-field
                     label="Your name"
                     prepend-icon="account_circle"
+                    name="Name"
                   ></v-text-field>
                   <v-text-field
                     label="Email"
                     prepend-icon="email"
+                    name="_replyto"
                   ></v-text-field>
                 </v-flex>
                 <v-flex xs12 md5>
@@ -46,6 +48,7 @@
                       label="Arrival Date"
                       v-model="aDate"
                       prepend-icon="event"
+                      name="Arrival Date"
                       readonly
                     ></v-text-field>
                     <v-date-picker v-model="aDate" scrollable autosave>
@@ -63,6 +66,7 @@
                       label="Departure Date"
                       v-model="dDate"
                       prepend-icon="event"
+                      name="Departure Date"
                       readonly
                     ></v-text-field>
                     <v-date-picker v-model="dDate" scrollable autosave>
@@ -74,12 +78,14 @@
                     label="Number in Group"
                     prepend-icon="group"
                     type="number"
+                    name="Number in Group"
                   ></v-text-field>
                 </v-flex>
                 <v-flex xs12>
                   <v-text-field
                     label="Additional Information"
                     prepend-icon="create"
+                    name="Additional Information"
                     multi-line
                   ></v-text-field>
                 </v-flex>
@@ -88,7 +94,7 @@
             <v-card-actions>
               <v-layout class="text-xs-center">
                 <v-flex xs12>
-                  <v-btn primary raised large type="submit">Submit</v-btn>
+                  <v-btn primary raised large type="submit" name="action">Submit</v-btn>
                 </v-flex>
               </v-layout>
             </v-card-actions>

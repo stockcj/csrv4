@@ -38,7 +38,10 @@ module.exports = {
       '/coronation-street/tilsley',
       '/fair-street/alpha',
       '/fair-street/bravo',
-      '/fair-street/charlie'
+      '/fair-street/charlie',
+      '/thanks',
+      '/reviews',
+      '/contact'
     ]
   },
   /*
