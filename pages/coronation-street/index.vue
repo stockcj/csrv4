@@ -22,7 +22,7 @@
           <h5 class="white--text text-xs-center thin mt-2">Coronation Street is in an ideal location for those visiting the City. The luxury serviced rooms are a mere 10-minute walk from the historic city centre and all that Cambridge has to offer.</h5>
         </v-flex>
         <v-flex xs12>
-          <div class="gmap"></div>
+          <div class="gmap"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d604.1611256696611!2d0.125989173246757!3d52.196844422990615!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47d8709bfc2ff1bd%3A0x81a079e17e85e46d!2s61+Coronation+St%2C+Cambridge+CB2+1HJ!5e0!3m2!1sen!2suk!4v1510417780858" width="100%" height="600" frameborder="0" style="border:0" allowfullscreen></iframe></div>
         </v-flex>
         <v-flex xs12 lg6 offset-lg3>
           <hr class="mt-5">
