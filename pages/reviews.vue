@@ -11,9 +11,9 @@
         <v-flex xs12 lg8 offset-lg2>
           <h1 class="page-header white--text text-xs-center mt-5">Reviews</h1>
           <h3 class="white--text text-xs-center thin mt-5">Read some of the things our lovely guests have had to say about Cambridge Serviced Rooms.</h3>
-          <v-container class="mt-5" grid-list-xl>
+          <v-container fluid class="mt-5" grid-list-xl>
             <v-layout row wrap>
-              <v-flex xs12 lg8 offset-lg2 class="mt-3" v-for="review in reviews" :key="review.id">
+              <v-flex xs12 class="mt-3" v-for="review in reviews" :key="review.id">
                 <h5 class="white--text thin">
                   <span><v-icon v-bind="size" class="icon-flipped">format_quote</v-icon></span>
                   {{review.text}}
