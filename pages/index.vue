@@ -5,7 +5,7 @@
         <v-flex xs12 md10 offset-md1>
           <v-container fluid grid-list-xl class="mt-4" style="min-height: 900px;">
             <v-layout row wrap align-items-center>
-              <v-flex xs12 lg8 offset-lg2 class="text-xs-center mb-5">
+              <v-flex xs12 lg10 xl8 offset-lg1 offset-xl2 class="text-xs-center mb-5">
                 <h1 class="white--text page-header">Cambridge Serviced Rooms</h1>
                 <h3 class="white--text mt-5"><span class="thin">We offer</span> fully serviced, centrally located, luxury accommodation<span class="thin"> in the city of Cambridge.</span></h3>
               </v-flex>
