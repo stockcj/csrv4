@@ -26,7 +26,7 @@
       <v-toolbar-title><nuxt-link tag="span" style="cursor: pointer" to="/">{{title}}</nuxt-link></v-toolbar-title>
       <v-spacer></v-spacer>
       <v-toolbar-items class="hidden-sm-and-down">
-        <v-menu open-on-hover bottom offset-y>
+        <v-menu bottom offset-y>
           <v-btn flat slot="activator">Properties</v-btn>
           <v-list>
             <v-list-tile router :to="'/coronation-street'">
