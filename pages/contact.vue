@@ -14,7 +14,7 @@
         </v-flex>
         <v-flex xs12 sm8 offset-sm2 md6 offset-md3 class="mt-3">
           <v-card id="contactCard" class="mb-5">
-            <v-form>
+            <form action="http://formspree.io/info@cambridgeservicedrooms.com" method="POST">
             <v-container>
             <v-card-title>
               <h3 class="headline">Enquiry Form</h3>
@@ -89,7 +89,7 @@
               </v-layout>
             </v-card-actions>
             </v-container>
-            </v-form>
+            </form>
           </v-card>
         </v-flex>
       </v-layout>
