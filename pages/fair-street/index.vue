@@ -22,18 +22,7 @@
           <h5 class="white--text text-xs-center thin mt-2">Fair Street is in an ideal location for those visiting the City. The luxury serviced rooms are a mere 10-minute walk from the historic city centre and all that Cambridge has to offer.</h5>
         </v-flex>
         <v-flex xs12>
-          <gmap-map
-            class="pa-3"
-            :center="{lat:52.2075221, lng:0.12911170000006678}"
-            :zoom="17"
-            map-type-id="roadmap"
-            style="width: 100%; height: 500px;"
-          >
-            <gmap-marker
-            :position="{lat:52.2075221, lng:0.12911170000006678}"
-            >
-            </gmap-marker>
-          </gmap-map>
+          <div class="gmap"></div>
         </v-flex>
         <v-flex xs12 lg6 offset-lg3>
           <hr class="mt-5">

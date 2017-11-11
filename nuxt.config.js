@@ -18,8 +18,7 @@ module.exports = {
   },
   plugins: [
     '~/plugins/vuetify.js',
-    '~/plugins/vue-scrollmonitor.js',
-    '~/plugins/google-maps.js'
+    '~/plugins/vue-scrollmonitor.js'
   ],
   css: [
     '~/assets/style/app.styl',
@@ -52,7 +51,7 @@ module.exports = {
   ** Build configuration
   */
   build: {
-    vendor: ['vuetify', 'vue-scrollmonitor', 'vue2-google-maps'],
+    vendor: ['vuetify', 'vue-scrollmonitor'],
     extractCSS: true,
     /*
     ** Run ESLINT on save
