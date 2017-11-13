@@ -1,11 +1,6 @@
 <template>
   <v-app light>
-    <v-navigation-drawer
-      right
-      temporary
-      v-model="drawer"
-      enable-resize-watcher
-    >
+    <v-navigation-drawer app right fixed temporary v-model="drawer">
       <v-list>
         <v-list-tile
           v-for="(item, i) in items"
@@ -21,7 +16,7 @@
           </v-list-tile>
       </v-list>
     </v-navigation-drawer>
-    <v-toolbar :class="[toolbar ? 'toolbar--home' : 'hidden']" fixed>
+    <v-toolbar app :class="[toolbar ? 'toolbar--home' : 'hidden']" fixed>
       <img src="/csrlogo1_icon.svg" alt="Cambridge Serviced Rooms" style="height:48px;"/>
       <v-spacer></v-spacer>
       <v-toolbar-items class="hidden-sm-and-down">
@@ -40,7 +35,6 @@
         <v-btn flat to="/contact">Contact Us</v-btn>
       </v-toolbar-items>
       <v-toolbar-side-icon class="hidden-md-and-up" @click.stop="drawer = !drawer"></v-toolbar-side-icon>
-    </v-toolbar>
     </v-toolbar>
     <v-parallax src="/backs.jpg" style="height: auto;">
         <v-layout column align-center>
@@ -65,12 +59,10 @@
           </v-flex>
         </v-layout>
     </v-parallax>
-    <main class="home camblue">
-      <v-content>
-        <nuxt />
-      </v-content>
-    </main>
-    <v-footer class="blue-grey darken-3">
+    <v-content class="home camblue">
+      <nuxt />
+    </v-content>
+    <v-footer app class="blue-grey darken-3">
       <span class="white--text">&copy; 2017</span>
     </v-footer>
   </v-app>
@@ -80,7 +72,7 @@
   export default {
     data () {
       return {
-        drawer: false,
+        drawer: null,
         toolbar: false,
         title: 'Cambridge Serviced Rooms',
         items: [

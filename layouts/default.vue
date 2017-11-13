@@ -1,11 +1,6 @@
 <template>
   <v-app light>
-    <v-navigation-drawer
-      right
-      temporary
-      v-model="drawer"
-      enable-resize-watcher
-    >
+    <v-navigation-drawer app right fixed temporary v-model="drawer">
       <v-list>
         <v-list-tile
           v-for="(item, i) in items"
@@ -42,12 +37,10 @@
       </v-toolbar-items>
       <v-toolbar-side-icon class="hidden-md-and-up" @click.stop="drawer = !drawer"></v-toolbar-side-icon>
     </v-toolbar>
-    <main>
-      <v-content>
-        <nuxt />
-      </v-content>
-    </main>
-    <v-footer class="blue-grey darken-3">
+    <v-content>
+      <nuxt />
+    </v-content>
+    <v-footer app class="blue-grey darken-3">
       <span class="white--text">&copy; 2017</span>
     </v-footer>
   </v-app>
@@ -57,7 +50,7 @@
   export default {
     data () {
       return {
-        drawer: false,
+        drawer: null,
         items: [
           { to: '/', title: 'Home', icon: 'home' },
           { to: '/coronation-street', title: 'Coronation Street', icon: 'hotel' },

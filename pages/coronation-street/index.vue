@@ -9,7 +9,7 @@
     <v-container fluid class="camblue">
       <v-layout column class="mt-3">
         <v-flex xs12 lg6 offset-lg3>
-          <h1 class="page-header white--text text-xs-center mt-5">Coronation Street</h1>
+          <h1 class="display-4 page-header white--text text-xs-center mt-5">Coronation Street</h1>
           <h4 class="page-header white--text text-xs-center mt-5">It’s peaceful environment, and location, make it an ideal base for either working from home, or working in, or just visiting the city.</h4>
           <div class="pa-3 mt-3 white--text text-xs-center">
             <h5 class="thin">The house has been newly renovated and finished to a high standard. With light communal spaces, and comfortable private rooms, it's the perfect place to rest or work.</h5>

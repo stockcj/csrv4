@@ -12,9 +12,12 @@
   "dependencies": {
     "animated-vue": "^0.5.3",
     "contentful": "^4.6.1",
-    "nuxt": "^1.0.0-rc6",
+    "nuxt": "^1.0.0-rc11",
+    "vue": "^2.5.3",
     "vue-scrollmonitor": "0.0.2",
-    "vuetify": "^0.16.6"
+    "vue-server-renderer": "^2.5.2",
+    "vue-template-compiler": "^2.5.2",
+    "vuetify": "^0.17.0"
   },
   "devDependencies": {
     "babel-eslint": "^7.2.3",
