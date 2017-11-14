@@ -9,7 +9,7 @@
               </v-card-media>
               <v-card-title primary-title>
                 <div>
-                  <h4>{{room.name}}</h4>
+                  <h4 class="display-1">{{room.name}}</h4>
                   <div class="mt-2">
                     <v-chip v-for="(feature, index) in room.features" :key="index" class="blue white--text">
                       {{feature}}

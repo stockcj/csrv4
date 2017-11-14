@@ -9,8 +9,8 @@
     <v-container fluid class="camblue">
       <v-layout row wrap>
         <v-flex xs12 sm10 offset-sm1 md8 offset-md2 class id="thanks">
-          <h1 class="page-header white--text text-xs-center mt-5">Thank you!</h1>
-          <h3 class="white--text text-xs-center thin mt-5 mb-5">Your request has been sent successfully.  We aim to respond to all enquiries within 24 hours. Speak soon!</h3>
+          <h1 class="display-4 page-header white--text text-xs-center mt-5">Thank you!</h1>
+          <h3 class="display-2 white--text text-xs-center thin mt-5 mb-5">Your request has been sent successfully.  We aim to respond to all enquiries within 24 hours. Speak soon!</h3>
         </v-flex>
       </v-layout>
     </v-container>
