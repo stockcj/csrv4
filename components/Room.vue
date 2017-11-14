@@ -22,7 +22,7 @@
           </div>
         </v-flex>
         <v-flex xs12 lg6 offset-lg3 class="mt-3">
-          <v-carousel hide-controls :class="[$vuetify.breakpoint.xs ? 'carousel--small' : '']">
+          <v-carousel hide-delimiters :class="[$vuetify.breakpoint.xs ? 'carousel--small' : '']">
             <v-carousel-item v-for="(img,i) in room.images" v-bind:src="img" :key="i"></v-carousel-item>
           </v-carousel>
         </v-flex>
