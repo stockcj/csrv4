@@ -20,7 +20,7 @@
         <v-flex xs12 sm10 offset-sm1 md8 offset-md2 class="mb-5">
           <v-container grid-list-xl>
             <v-carousel hide-delimiters :class="[$vuetify.breakpoint.xs ? 'carousel--small' : '']">
-              <v-carousel-item v-for="(img,i) in property[0].images" v-bind:src="img" :key="i"></v-carousel-item>
+              <v-carousel-item v-for="(img,i) in property.images" v-bind:src="img" :key="i"></v-carousel-item>
             </v-carousel>
           </v-container>
         </v-flex>
@@ -67,8 +67,7 @@ export default {
     property () {
       return this.$store.getters.getProperty(this.$route.name)
     }
-  },
-  middleware: ['load-rooms', 'load-property']
+  }
 }
 </script>
 

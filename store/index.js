@@ -8,7 +8,8 @@ const createStore = () => {
     state: {
       sidebar: false,
       rooms: [],
-      reviews: []
+      reviews: [],
+      properties: []
     },
     mutations: {
       toggleSidebar (state) {
@@ -100,7 +101,7 @@ const createStore = () => {
       },
       getProperty (state, propertyId) {
         return (propertyId) => {
-          return state.properties.filter((property) => {
+          return state.properties.find((property) => {
             return property.id === propertyId
           })
         }

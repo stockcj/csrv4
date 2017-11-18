@@ -25,7 +25,7 @@ module.exports = {
     '~/assets/style/main.css'
   ],
   router: {
-    middleware: 'load-rooms'
+    middleware: ['load-rooms', 'load-property']
   },
   generate: {
     routes: [
