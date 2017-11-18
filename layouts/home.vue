@@ -16,7 +16,7 @@
           </v-list-tile>
       </v-list>
     </v-navigation-drawer>
-    <v-toolbar app :class="[toolbar ? 'toolbar--home' : 'hidden']" fixed>
+    <v-toolbar app color="camblue" :class="[toolbar ? 'toolbar--home' : 'hidden']" fixed>
       <img src="/csrlogo1_icon.svg" alt="Cambridge Serviced Rooms" style="height:48px;"/>
       <v-spacer></v-spacer>
       <v-toolbar-items class="hidden-sm-and-down">
@@ -59,11 +59,11 @@
           </v-flex>
         </v-layout>
     </v-parallax>
-    <v-content class="home camblue">
+    <v-content class="home" style="background-color: #eee;">
       <nuxt />
     </v-content>
-    <v-footer app class="blue-grey darken-3">
-      <span class="white--text">&copy; 2017</span>
+    <v-footer app class="camblue_darken">
+      <span>&copy; 2017</span>
     </v-footer>
   </v-app>
 </template>

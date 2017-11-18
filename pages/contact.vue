@@ -6,13 +6,13 @@
         <img src="/csrlogo1.svg" alt="Cambridge Serviced Rooms" class="mt-5 mb-5 hidden-xs-only" style="height:400px;"/>
       </v-flex>
     </v-layout>
-    <v-container fluid class="camblue">
+    <v-container fluid grey lighten-3>
       <v-layout row wrap>
         <v-flex xs12 sm10 offset-sm1 md8 offset-md2>
-          <h1 class="display-4 page-header white--text text-xs-center mt-5">Contact Us</h1>
-          <h3 class="display-2 white--text text-xs-center thin mt-5">If you think you might like to stay with us, great! You can send us an enquiry by submitting the form below.</h3>
+          <h1 class="display-4 page-header mt-5">Contact Us</h1>
+          <h3 class="display-2 thin mt-5 mb-5">If you think you might like to stay with us, great! You can send us an enquiry by submitting the form below.</h3>
         </v-flex>
-        <v-flex xs12 sm8 offset-sm2 md6 offset-md3 class="mt-3">
+        <v-flex xs12 sm10 offset-sm1 md8 offset-md2 class="mt-5">
           <v-card id="contactCard" class="mb-5">
             <form action="http://formspree.io/info@cambridgeservicedrooms.com" method="POST">
             <input type="hidden" name="_subject" value="CSR Enquiry">

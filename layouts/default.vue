@@ -16,7 +16,7 @@
         </v-list-tile>
       </v-list>
     </v-navigation-drawer>
-    <v-toolbar fixed app>
+    <v-toolbar fixed app class="camblue">
       <img src="/csrlogo1_icon.svg" alt="Cambridge Serviced Rooms" style="height:48px;"/>
       <v-toolbar-title><nuxt-link tag="span" style="cursor: pointer" to="/">{{title}}</nuxt-link></v-toolbar-title>
       <v-spacer></v-spacer>
@@ -40,8 +40,8 @@
     <v-content>
       <nuxt />
     </v-content>
-    <v-footer app class="blue-grey darken-3">
-      <span class="white--text">&copy; 2017</span>
+    <v-footer app class="camblue">
+      <span>&copy; 2017</span>
     </v-footer>
   </v-app>
 </template>

@@ -6,32 +6,35 @@
         <img src="/csrlogo1.svg" alt="Cambridge Serviced Rooms" class="mt-5 mb-5 hidden-xs-only" style="height:400px;"/>
       </v-flex>
     </v-layout>
-    <v-container fluid class="camblue">
+    <v-container fluid grey lighten-3>
       <v-layout column class="mt-3">
-        <v-flex xs12 lg6 offset-lg3>
-          <h1 class="display-4 page-header white--text text-xs-center mt-5">Fair Street</h1>
-          <h4 class="display-1 page-header white--text text-xs-center mt-5">Property description</h4>
-          <div class="pa-3 mt-3 white--text text-xs-center">
-            <h5 class="headline thin">blurb</h5>
-            <h5 class="headline mt-4">blurb</h5>
-          </div>
+        <v-flex xs12 sm10 offset-sm1 md8 offset-md2>
+          <h1 class="display-4 page-header mt-5">Fair Street</h1>
+          <h3 class="display-2 thin mt-5 mb-5">Property description</h3>
           <hr>
         </v-flex>
-        <v-flex xs12 lg6 offset-lg3>
-          <h2 class="display-3 page-header white--text text-xs-center mt-5">Ideal Location</h2>
-          <h5 class="headline white--text text-xs-center thin mt-2">Fair Street is in an ideal location for those visiting the City. The luxury serviced rooms are a mere 10-minute walk from the historic city centre and all that Cambridge has to offer.</h5>
+        <v-flex xs12 sm10 offset-sm1 md8 offset-md2>
+          <h2 class="display-3 page-header mt-5">The Property</h2>
+          <h5 class="headline thin mt-2">blurb</h5>
         </v-flex>
-        <v-flex xs12>
-          <div class="gmap">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d864.43172847973!2d0.12877562045421104!3d52.20737190174702!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47d87093d3c37cd5%3A0x8b2ded7c7b16590c!2s5+Fair+St%2C+Cambridge+CB1+1HA!5e0!3m2!1sen!2suk!4v1510418216181" width="100%" height="600" frameborder="0" style="border:0" allowfullscreen></iframe>
-          </div>
-        </v-flex>
-        <v-flex xs12 lg6 offset-lg3>
+        <v-flex xs12 sm10 offset-sm1 md8 offset-md2>
           <hr class="mt-5">
         </v-flex>
-        <v-flex xs12 lg6 offset-lg3>
-          <h2 class="display-3 page-header white--text text-xs-center mt-5">Exceptional spaces</h2>
-          <h5 class="headline white--text text-xs-center thin mt-2">Restoration blurb</h5>
+        <v-flex xs12 sm10 offset-sm1 md8 offset-md2>
+          <h2 class="display-3 page-header mt-5">Ideal Location</h2>
+          <h5 class="headline thin mt-2">Fair Street is in an ideal location for those visiting the City. The luxury serviced rooms are a mere 10-minute walk from the historic city centre and all that Cambridge has to offer.</h5>
+        </v-flex>
+        <v-flex xs12 sm10 offset-sm1>
+          <v-container grid-list-xl>
+            <div class="gmap mt-5"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d864.43172847973!2d0.12877562045421104!3d52.20737190174702!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47d87093d3c37cd5%3A0x8b2ded7c7b16590c!2s5+Fair+St%2C+Cambridge+CB1+1HA!5e0!3m2!1sen!2suk!4v1510418216181" width="100%" height="600" frameborder="0" style="border:0" allowfullscreen></iframe></div>
+          </v-container>
+        </v-flex>
+        <v-flex  xs12 sm10 offset-sm1 md8 offset-md2>
+          <hr class="mt-5">
+        </v-flex>
+        <v-flex  xs12 sm10 offset-sm1 md8 offset-md2>
+          <h2 class="display-3 page-header mt-5">Exceptional spaces</h2>
+          <h5 class="headline thin mt-2">Restoration blurb</h5>
         </v-flex>
       </v-layout>
       <property />
@@ -45,8 +48,8 @@ import Property from '~/components/Property.vue'
 export default {
   components: {
     Property
-  }
-
+  },
+  middleware: 'load-rooms'
 }
 </script>
 
