@@ -14,6 +14,9 @@ const createStore = () => {
       toggleSidebar (state) {
         state.sidebar = !state.sidebar
       },
+      setProperties (state, payload) {
+        state.properties = payload
+      },
       setRooms (state, payload) {
         state.rooms = payload
       },
@@ -25,6 +28,29 @@ const createStore = () => {
       }
     },
     actions: {
+      loadProperties ({commit, state}) {
+        client.getEntries({
+          'content_type': 'property',
+          'order': 'fields.id'
+        })
+          .then((data) => {
+            const properties = []
+            data.items.forEach((property) => {
+              const images = []
+              if (property.fields.images) {
+                for (const img of property.fields.images) {
+                  images.push('http:' + img.fields.file.url)
+                }
+              }
+              properties.push({
+                id: property.fields.id,
+                name: property.fields.name,
+                images: images
+              })
+            })
+            commit('setProperties', properties)
+          })
+      },
       loadRooms ({commit}) {
         client.getEntries({
           'content_type': 'room',
@@ -69,6 +95,16 @@ const createStore = () => {
       }
     },
     getters: {
+      getProperties (state) {
+        return state.properties
+      },
+      getProperty (state, propertyId) {
+        return (propertyId) => {
+          return state.properties.filter((property) => {
+            return property.id === propertyId
+          })
+        }
+      },
       getRooms (state) {
         return state.rooms
       },

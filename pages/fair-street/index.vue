@@ -17,6 +17,13 @@
           <h2 class="display-3 page-header mt-5">The Property</h2>
           <h5 class="headline thin mt-2">blurb</h5>
         </v-flex>
+        <v-flex xs12 sm10 offset-sm1 md8 offset-md2 class="mb-5">
+          <v-container grid-list-xl>
+            <v-carousel hide-delimiters :class="[$vuetify.breakpoint.xs ? 'carousel--small' : '']">
+              <v-carousel-item v-for="(img,i) in property[0].images" v-bind:src="img" :key="i"></v-carousel-item>
+            </v-carousel>
+          </v-container>
+        </v-flex>
         <v-flex xs12 sm10 offset-sm1 md8 offset-md2>
           <hr class="mt-5">
         </v-flex>
@@ -26,7 +33,7 @@
         </v-flex>
         <v-flex xs12 sm10 offset-sm1>
           <v-container grid-list-xl>
-            <div class="gmap mt-5"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d864.43172847973!2d0.12877562045421104!3d52.20737190174702!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47d87093d3c37cd5%3A0x8b2ded7c7b16590c!2s5+Fair+St%2C+Cambridge+CB1+1HA!5e0!3m2!1sen!2suk!4v1510418216181" width="100%" height="600" frameborder="0" style="border:0" allowfullscreen></iframe></div>
+            <div class="gmap mt-5"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d864.43172847973!2d0.12877562045421104!3d52.20737190174702!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47d87093d3c37cd5%3A0x8b2ded7c7b16590c!2s5+Fair+St%2C+Cambridge+CB1+1HA!5e0!3m2!1sen!2suk!4v1510418216181" width="100%" :height="height" frameborder="0" style="border:0" allowfullscreen></iframe></div>
           </v-container>
         </v-flex>
         <v-flex  xs12 sm10 offset-sm1 md8 offset-md2>
@@ -49,12 +56,27 @@ export default {
   components: {
     Property
   },
-  middleware: 'load-rooms'
+  computed: {
+    height () {
+      if (this.$vuetify.breakpoint.smAndDown) {
+        return (300)
+      } else {
+        return (500)
+      }
+    },
+    property () {
+      return this.$store.getters.getProperty(this.$route.name)
+    }
+  },
+  middleware: ['load-rooms', 'load-property']
 }
 </script>
 
 <style>
   #fairStreet {
     background-image: url('/lg2.jpg');
+  }
+  .carousel--small {
+    height: 300px;
   }
 </style>
