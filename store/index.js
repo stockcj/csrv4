@@ -81,7 +81,7 @@ const createStore = () => {
             commit('setRooms', rooms)
           })
       },
-      loadReviews ({commit, state}) {
+      loadReviews ({commit}) {
         client.getEntries({
           'content_type': 'review',
           'order': 'fields.id'
