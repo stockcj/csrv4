@@ -1,10 +1,12 @@
 import {createClient} from '~/plugins/contentful.js'
 import Vuex from 'vuex'
+import createPersistedState from 'vuex-persistedstate'
 
 const client = createClient()
 
 const createStore = () => {
   return new Vuex.Store({
+    plugins: [createPersistedState()],
     state: {
       sidebar: false,
       rooms: [],
