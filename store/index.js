@@ -1,5 +1,4 @@
 import {createClient} from '~/plugins/contentful.js'
-import createPersistedState from 'vuex-persistedstate'
 import Vuex from 'vuex'
 import createPersistedState from 'vuex-persistedstate'
 
