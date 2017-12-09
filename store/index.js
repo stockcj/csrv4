@@ -1,4 +1,5 @@
 import {createClient} from '~/plugins/contentful.js'
+import createPersistedState from 'vuex-persistedstate'
 import Vuex from 'vuex'
 import createPersistedState from 'vuex-persistedstate'
 
@@ -83,7 +84,7 @@ const createStore = () => {
             commit('setRooms', rooms)
           })
       },
-      loadReviews ({commit, state}) {
+      loadReviews ({commit}) {
         client.getEntries({
           'content_type': 'review',
           'order': 'fields.id'
