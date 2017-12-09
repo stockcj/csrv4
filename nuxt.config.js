@@ -24,9 +24,6 @@ module.exports = {
     '~/assets/style/app.styl',
     '~/assets/style/main.css'
   ],
-  router: {
-    middleware: ['load-rooms', 'load-property']
-  },
   generate: {
     routes: [
       '/coronation-street/battersby',

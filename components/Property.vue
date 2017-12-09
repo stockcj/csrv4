@@ -32,13 +32,9 @@
 <script>
 
 export default {
+  props: ['rooms'],
   name: 'property',
   computed: {
-    rooms () {
-      const path = this.$route.path
-      const property = path.match(/[^/]+$/g)[0]
-      return this.$store.getters.getHouseRooms(property)
-    },
     height () {
       if (this.$vuetify.breakpoint.xl) {
         return (400)

@@ -45,11 +45,7 @@ export default {
     }
   },
   name: 'room',
-  computed: {
-    room () {
-      return this.$store.getters.getRoom(this.$route.params.id)
-    }
-  }
+  props: ['room']
 }
 </script>
 

@@ -44,13 +44,16 @@
           <h5 class="headline thin mt-2">Following our complete renovation of the appealing late Victorian house, we were keen to give each room an individual feel and personality, whilst retaining the original character</h5>
         </v-flex>
       </v-layout>
-      <property />
+      <property :rooms="rooms"/>
     </v-container>
   </div>
 </template>
 
 <script>
 import Property from '~/components/Property.vue'
+import {createClient} from '~/plugins/contentful.js'
+
+const client = createClient()
 
 export default {
   components: {
@@ -63,10 +66,45 @@ export default {
       } else {
         return (500)
       }
-    },
-    property () {
-      return this.$store.getters.getProperty(this.$route.name)
     }
+  },
+  async asyncData ({env}) {
+    let pData = await client.getEntries({'content_type': 'property'})
+    let rData = await client.getEntries({
+      'content_type': 'room',
+      'order': 'fields.number'
+    })
+    const rawProperty = pData.items[0]
+    const images = []
+    if (rawProperty.fields.images) {
+      for (const img of rawProperty.fields.images) {
+        images.push('http:' + img.fields.file.url)
+      }
+    }
+    const property = {
+      id: rawProperty.fields.id,
+      name: rawProperty.fields.name,
+      images: images
+    }
+    const rooms = []
+    rData.items.forEach((room) => {
+      const rImages = []
+      if (room.fields.houseName === property.name) {
+        if (room.fields.images) {
+          for (const img of room.fields.images) {
+            rImages.push('http:' + img.fields.file.url)
+          }
+        }
+        rooms.push({
+          id: room.fields.id,
+          name: room.fields.name,
+          features: room.fields.features,
+          images: images,
+          titleImage: 'https:' + room.fields.titleImage.fields.file.url
+        })
+      }
+    })
+    return { property, rooms }
   }
 }
 </script>

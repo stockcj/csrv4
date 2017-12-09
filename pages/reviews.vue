@@ -29,7 +29,22 @@
 </template>
 
 <script>
+import {createClient} from '~/plugins/contentful.js'
+
+const client = createClient()
+
 export default {
+  async asyncData ({env}) {
+    let data = await client.getEntries({
+      'content_type': 'review',
+      'order': 'fields.id'
+    })
+    const reviews = []
+    data.items.forEach((review) => {
+      reviews.push(review.fields)
+    })
+    return { reviews }
+  },
   computed: {
     size () {
       if (this.$vuetify.breakpoint.lgAndUp) {
@@ -41,12 +56,8 @@ export default {
       } else {
         return ({'small': true})
       }
-    },
-    reviews () {
-      return this.$store.getters.getReviews
     }
-  },
-  middleware: 'load-reviews'
+  }
 }
 </script>
 
@@ -59,3 +70,17 @@ export default {
     margin-top: 15px;
   }
 </style>
+
+loadReviews ({commit}) {
+        client.getEntries({
+          'content_type': 'review',
+          'order': 'fields.id'
+        })
+          .then((data) => {
+            const reviews = []
+            data.items.forEach((review) => {
+              reviews.push(review.fields)
+            })
+            commit('setReviews', reviews)
+          })
+      }
