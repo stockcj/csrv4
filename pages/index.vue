@@ -9,17 +9,35 @@
               <h3 class="display-2 mt-5"><span class="thin">We offer</span> fully serviced, centrally located, luxury accommodation<span class="thin"> in the city of Cambridge.</span></h3>
             </v-flex>
             <scroll-item v-for="(item, i) in items" :id="i" :key="i">
-              <v-flex v-if="item.dir === 'left'" xs12 lg7 class="mb-5 mt-5">
-                <div :class="`home-text ${state[i] && state[i].isBelowViewport ? 'hidden-left' : ''}`">
-                  <h3 class="display-2">{{item.title}}</h3>
-                  <h5 class="headline thin mt-2">{{item.text}}</h5>
-                </div>
+              <v-flex v-if="item.dir === 'left'" xs12 class="mb-5 mt-5">
+                <v-layout>
+                  <v-flex xs12 lg7>
+                    <div :class="`home-text ${state[i] && state[i].isBelowViewport ? 'hidden-left' : ''}`">
+                      <h3 class="display-2">{{item.title}}</h3>
+                      <h5 class="headline thin mt-2">{{item.text}}</h5>
+                    </div>
+                  </v-flex>
+                  <v-flex xs12 lg5>
+                    <v-layout :class="`home-text ${state[i] && state[i].isBelowViewport ? 'hidden-right' : ''}`" style="height: 100%; width: 100%;">
+                      <img src="/v.png" style="margin: auto; max-width: 100%; max-height: 100%">
+                    </v-layout>
+                  </v-flex>
+                </v-layout>
               </v-flex>
-              <v-flex v-else-if="item.dir === 'right'" xs12 lg7 offset-lg5 class="mb-5 mt-5">
-                <div :class="`home-text ${state[i] && state[i].isBelowViewport ? 'hidden-right' : ''}`">
-                  <h3 class="display-2">{{item.title}}</h3>
-                  <h5 class="headline thin mt-2">{{item.text}}</h5>
-                </div>
+              <v-flex v-else-if="item.dir === 'right'" xs12 class="mb-5 mt-5">
+                <v-layout>
+                  <v-flex xs12 lg5>
+                    <v-layout :class="`home-text ${state[i] && state[i].isBelowViewport ? 'hidden-left' : ''}`" style="height: 100%; width: 100%;">
+                      <img src="/v.png" style="margin: auto; max-width: 100%; max-height: 100%">
+                    </v-layout>
+                  </v-flex>
+                  <v-flex xs12 lg7>
+                    <div :class="`home-text ${state[i] && state[i].isBelowViewport ? 'hidden-right' : ''}`">
+                      <h3 class="display-2">{{item.title}}</h3>
+                      <h5 class="headline thin mt-2">{{item.text}}</h5>
+                    </div>
+                  </v-flex>
+                </v-layout>
               </v-flex>
             </scroll-item>
           </v-layout>
