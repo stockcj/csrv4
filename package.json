@@ -9,6 +9,11 @@
     "start": "nuxt start",
     "generate": "nuxt generate"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/stockcj/csrv4.git"
+  },
+  "license": "MIT",
   "dependencies": {
     "animated-vue": "^0.5.3",
     "contentful": "^4.6.1",
