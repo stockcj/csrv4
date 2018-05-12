@@ -50,6 +50,49 @@
             
           </v-layout>
         </v-flex>
+        <scroll-item id="10">
+          <div :class="`properties-section ${state['10'] && state['10'].isBelowViewport ? 'hidden' : ''}`">
+            <v-flex xs12 sm10 offset-sm1 md8 offset-md2>
+              <h2 class="display-3 mb-5">Our Properties</h2>
+            </v-flex>
+          </div>
+        </scroll-item>
+        <div :class="`properties-section ${state['10'] && state['10'].isBelowViewport ? 'hidden' : ''}`">
+          <v-flex xs12>
+            <div id="properties" class="mb-5">
+              <v-layout row wrap>
+                <v-flex xs12 lg6>
+                  <div class="prop-card-container">
+                    <v-card flat class="prop-card">
+                      <v-card-media src="http://images.ctfassets.net/kgtv9xl00xvv/2jcquMwaj6ggWI0cqyEsii/b203c8db31d0f38507e527effc249e52/ext2.jpg" :height="height"></v-card-media>
+                      <v-card-title>Coronation Street</v-card-title>
+                    </v-card>
+                    <div class="card-overlay">
+                      <div class="overlay-text">
+                        <h1 class="display-4 thick">Coronation Street</h1>
+                        <h5 class="display-1 mt-5">6 Bedrooms, close to the station.</h5>
+                      </div>
+                    </div>
+                  </div>
+                </v-flex>
+                <v-flex xs12 lg6>
+                  <div class="prop-card-container">
+                    <v-card flat class="prop-card">
+                      <v-card-media src="http://images.ctfassets.net/kgtv9xl00xvv/2jcquMwaj6ggWI0cqyEsii/b203c8db31d0f38507e527effc249e52/ext2.jpg" :height="height"></v-card-media>
+                      <v-card-title>Fair Street</v-card-title>
+                    </v-card>
+                    <div class="card-overlay">
+                      <div class="overlay-text">
+                        <h1 class="display-4 thick">Fair Street</h1>
+                        <h5 class="display-1 mt-5">6 Bedrooms, near the city centre.</h5>
+                      </div>
+                    </div>
+                  </div>
+                </v-flex>
+              </v-layout>
+            </div>
+          </v-flex>
+        </div>
       </v-layout>
     </v-container>
   </scroll-container>
@@ -67,6 +110,21 @@
           { dir: 'right', title: 'Exceptional Facilities', text: 'The houses provide free, unlimited, high speed broadband, via wi-fi connection. All guests have use of both the exceptionally equipped kitchens, which enable comfortable self catering, and the utility rooms, which have both a washing machine and tumble drier. The gardens benefits from soft landscaping, furniture, and have secure cycle storage space.' }
         ],
         state: {}
+      }
+    },
+    computed: {
+      height () {
+        if (this.$vuetify.breakpoint.xl) {
+          return (600)
+        } else if (this.$vuetify.breakpoint.lg) {
+          return (600)
+        } else if (this.$vuetify.breakpoint.md) {
+          return (600)
+        } else if (this.$vuetify.breakpoint.sm) {
+          return (400)
+        } else {
+          return (300)
+        }
       }
     },
     methods: {
