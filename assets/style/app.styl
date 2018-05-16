@@ -14,20 +14,36 @@
 
 .home-text
   opacity 1
-  transform: translateX(0%)
-  transition opacity 0.25s ease-in-out, transform 0.25s ease-in-out
+  transform translateX(0%)
+  transition opacity 0.5s ease-in-out 0.25s
+  &.hidden
+    opacity 0
+    pointer-events none
+
+.home-icon
+  opacity 1
+  transition opacity .25s ease-in-out
+  &.hidden
+    opacity 0
+    pointer-events none
+
+.boxy
+  background-color rgba(145, 185, 164, 0.5)
+  border-radius 10px
+  padding 40px 60px
+  opacity 1
+  transform translateX(0%)
+  box-shadow 5px 5px 10px 0px rgba(0,0,0,0.75)
+  transition opacity 0.25s ease-in-out, transform 0.25s ease-in-out, box-shadow 0.5s ease-in-out 0.25s
   &.hidden-left
     opacity 0
-    transform: translateX(-100%)
+    transform translateX(200%)
     pointer-events none
-  &.hidden-right
-    opacity 0
-    transform: translateX(200%)
-    pointer-events none
+    box-shadow none
 
 .services-title
   opacity 1
-  transition opacity 0.25s ease-in-out
+  transition opacity 0.5s ease-in-out
   &.hidden
     opacity 0
     pointer-events none
