@@ -1,0 +1,32 @@
+csr tasks
+
+general:
+- create footer
+- fix transition between home page and rest of the app
+- add make an enquiry area to the bottom of the property and room pages
+- Add text an images to Contentful
+
+homepage:
+- fix buttons on mobile view
+- make page title smaller on mobile view
+- update property image and text for Our Properties
+
+Reviews:
+- Done
+
+Contact Us:
+- Update hero image
+- add preferred property to contact form
+
+Coronation Street:
+- update hero image
+- update strap line
+- add images to carousel
+
+Room pages:
+- make sure hero images are right
+- add back to property link from room pages
+- fix aspect ratio for carousel
+
+
+
