@@ -65,7 +65,7 @@
                 <v-flex xs12 lg6>
                   <div class="prop-card-container">
                     <v-card flat class="prop-card">
-                      <v-card-media src="http://images.ctfassets.net/kgtv9xl00xvv/2jcquMwaj6ggWI0cqyEsii/b203c8db31d0f38507e527effc249e52/ext2.jpg" :height="height"></v-card-media>
+                      <v-card-media src="http://images.ctfassets.net/kgtv9xl00xvv/JF34zE5nMc6Ca8s2smQ6W/6903a5f4f279bd6e98ce75ef2ca4cf58/fsext1m.jpg" :height="height"></v-card-media>
                       <v-card-title>Fair Street</v-card-title>
                     </v-card>
                     <div class="card-overlay">

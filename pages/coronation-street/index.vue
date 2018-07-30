@@ -19,7 +19,7 @@
         </v-flex>
         <v-flex xs12 sm10 offset-sm1 md8 offset-md2 class="mb-5">
           <v-container grid-list-xl>
-            <v-carousel hide-delimiters :class="[$vuetify.breakpoint.xs ? 'carousel--small' : '']">
+            <v-carousel class="prop-carousel" hide-delimiters :class="[$vuetify.breakpoint.xs ? 'carousel--small' : '']">
               <v-carousel-item v-for="(img,i) in property.images" v-bind:src="img" :key="i"></v-carousel-item>
             </v-carousel>
           </v-container>
@@ -69,7 +69,7 @@ export default {
     }
   },
   async asyncData ({env}) {
-    let pData = await client.getEntries({'content_type': 'property'})
+    let pData = await client.getEntries({'sys.id': '2ZDYujsqs8kCWamAa6aOS4'})
     let rData = await client.getEntries({
       'content_type': 'room',
       'order': 'fields.number'
