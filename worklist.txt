@@ -6,6 +6,7 @@ general:
 - add make an enquiry area to the bottom of the property and room pages
 - optimise for SEO
 - set favicon
+- make sure that mobile view is working correctly
 
 homepage:
 - fix buttons on mobile view
