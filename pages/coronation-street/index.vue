@@ -9,12 +9,12 @@
     <v-container fluid grey lighten-3>
       <v-layout column class="mt-3">
         <v-flex xs12 sm10 offset-sm1 md8 offset-md2>
-          <h1 class="display-4 page-header mt-5">Coronation Street</h1>
-          <h3 class="display-2 thin mt-5 mb-5">It’s peaceful environment, and location, make it an ideal base for either working from home, or working in, or just visiting the city.</h3>
+          <h1 class="page-header mt-5" :class="[$vuetify.breakpoint.xs ? 'display-3 thin' : 'display-4']">Coronation Street</h1>
+          <h3 class="thin mt-5 mb-5" :class="[$vuetify.breakpoint.xs ? 'display-1' : 'display-2']">It’s peaceful environment, and location, make it an ideal base for either working from home, or working in, or just visiting the city.</h3>
           <hr>
         </v-flex>
         <v-flex xs12 sm10 offset-sm1 md8 offset-md2>
-          <h2 class="display-3 page-header mt-5">The Property</h2>
+          <h2 class="page-header mt-5" :class="[$vuetify.breakpoint.xs ? 'display-2' : 'display-3']">The Property</h2>
           <h5 class="headline thin mt-2 mb-5">The house has been newly renovated and finished to a high standard. With light communal spaces, and comfortable private rooms, it's the perfect place to rest or work.</h5>
         </v-flex>
         <v-flex xs12 sm10 offset-sm1 md8 offset-md2 class="mb-5">
@@ -28,7 +28,7 @@
           <hr class="mt-5">
         </v-flex>
         <v-flex xs12 sm10 offset-sm1 md8 offset-md2>
-          <h2 class="display-3 page-header mt-5">Central Location</h2>
+          <h2 class="page-header mt-5" :class="[$vuetify.breakpoint.xs ? 'display-2' : 'display-3']">Central Location</h2>
           <h5 class="headline thin mt-2">Coronation Street is in an ideal location for those visiting the City. The luxury serviced rooms are a mere 10-minute walk from the historic city centre and all that Cambridge has to offer.</h5>
         </v-flex>
         <v-flex xs12 sm10 offset-sm1 md8 offset-md2>
@@ -40,7 +40,7 @@
           <hr class="mt-5">
         </v-flex>
         <v-flex xs12 sm10 offset-sm1 md8 offset-md2>
-          <h2 class="display-3 page-header mt-5">Stunning Rooms</h2>
+          <h2 class="page-header mt-5" :class="[$vuetify.breakpoint.xs ? 'display-2' : 'display-3']">Stunning Rooms</h2>
           <h5 class="headline thin mt-2">Following our complete renovation of the appealing late Victorian house, we were keen to give each room an individual feel and personality, whilst retaining the original character</h5>
         </v-flex>
       </v-layout>

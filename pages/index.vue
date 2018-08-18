@@ -5,13 +5,13 @@
         <v-flex xs12 sm10 offset-sm1 md8 offset-md2>
           <v-layout row wrap>
             <v-flex xs12 class="mb-5">
-              <h1 class="display-4 page-header">Cambridge Serviced Rooms</h1>
-              <h3 class="display-2 mt-5"><span class="thin">We offer</span> fully serviced, centrally located, luxury accommodation<span class="thin"> in the city of Cambridge.</span></h3>
+              <h1 class="page-header" :class="[$vuetify.breakpoint.xs ? 'display-3 thin' : 'display-4']">Cambridge Serviced Rooms</h1>
+              <h3 class="mt-5" :class="[$vuetify.breakpoint.xs ? 'display-1' : 'display-2']"><span class="thin">We offer</span> fully serviced, centrally located, luxury accommodation<span class="thin"> in the city of Cambridge.</span></h3>
             </v-flex>
             <div id="services" class="mb-5">
               <scroll-item id="9" class="mb-5">
                 <div :class="`services-title ${state['9'] && state['9'].isBelowViewport ? 'hidden' : ''}`">
-                  <h2 class="display-3 mt-5 mb-5">What you can expect...</h2>
+                  <h2 class="mt-5 mb-5" :class="[$vuetify.breakpoint.xs ? 'display-2' : 'display-3']">What you can expect...</h2>
                 </div>
               </scroll-item>
               <scroll-item v-for="(item, i) in items" :id="i" :key="i">
@@ -23,11 +23,13 @@
                       </v-layout>
                     </v-flex>
                     <v-flex xs12 lg10>
-                      <div :class="`boxy ${state[i] && state[i].isBelowViewport ? 'hidden-left' : ''}`">
-                        <div :class="`home-text ${state[i] && state[i].isBelowViewport ? 'hidden' : ''}`">
-                          <i :class="`hidden-lg-and-up ${item.icon} fa-fw fa-10x`" style="position: absolute; right: 0; bottom: 0; opacity: 0.15;"></i>
-                          <h3 class="display-2">{{item.title}}</h3>
-                          <h5 class="headline thin mt-2">{{item.text}}</h5>
+                      <div :class="`boxy ${state[i] && state[i].isBelowViewport ? 'hidden-left' : ''}`" >
+                        <div :class="[$vuetify.breakpoint.xs ? 'ht-cont small' : 'ht-cont']" >
+                          <div :class="`home-text ${state[i] && state[i].isBelowViewport ? 'hidden' : ''}`">
+                            <i :class="`hidden-lg-and-up ${item.icon} fa-fw fa-10x`" style="position: absolute; right: 0; bottom: 0; opacity: 0.15;"></i>
+                            <h3 :class="[$vuetify.breakpoint.xs ? 'display-1' : 'display-2']">{{item.title}}</h3>
+                            <h5 class="headline thin mt-2">{{item.text}}</h5>
+                          </div>
                         </div>
                       </div>
                     </v-flex>
@@ -40,7 +42,7 @@
         <scroll-item id="10">
           <div :class="`properties-section ${state['10'] && state['10'].isBelowViewport ? 'hidden' : ''}`">
             <v-flex xs12 sm10 offset-sm1 md8 offset-md2>
-              <h2 class="display-3 mb-5">Our Properties</h2>
+              <h2 class="mb-5" :class="[$vuetify.breakpoint.xs ? 'display-2' : 'display-3']">Our Properties</h2>
             </v-flex>
           </div>
         </scroll-item>
@@ -52,12 +54,11 @@
                   <div class="prop-card-container">
                     <v-card flat class="prop-card">
                       <v-card-media src="http://images.ctfassets.net/kgtv9xl00xvv/2jcquMwaj6ggWI0cqyEsii/b203c8db31d0f38507e527effc249e52/ext2.jpg" :height="height"></v-card-media>
-                      <v-card-title>Coronation Street</v-card-title>
                     </v-card>
                     <div class="card-overlay">
-                      <div class="overlay-text">
-                        <h1 class="display-4 thick">Coronation Street</h1>
-                        <h5 class="display-1 mt-5">6 Bedrooms, close to the station.</h5>
+                      <div :class="[$vuetify.breakpoint.xs ? 'overlay-text small' : 'overlay-text']">
+                        <h1 class="thick" :class="[$vuetify.breakpoint.xs ? 'display-3 thin' : 'display-4']">Coronation Street</h1>
+                        <h5 class="hidden-xs-only display-1 mt-5">6 Bedrooms, close to the station.</h5>
                       </div>
                     </div>
                   </div>
@@ -66,12 +67,11 @@
                   <div class="prop-card-container">
                     <v-card flat class="prop-card">
                       <v-card-media src="http://images.ctfassets.net/kgtv9xl00xvv/JF34zE5nMc6Ca8s2smQ6W/6903a5f4f279bd6e98ce75ef2ca4cf58/fsext1m.jpg" :height="height"></v-card-media>
-                      <v-card-title>Fair Street</v-card-title>
                     </v-card>
                     <div class="card-overlay">
-                      <div class="overlay-text">
-                        <h1 class="display-4 thick">Fair Street</h1>
-                        <h5 class="display-1 mt-5">6 Bedrooms, near the city centre.</h5>
+                      <div :class="[$vuetify.breakpoint.xs ? 'overlay-text small' : 'overlay-text']">
+                        <h1 class="thick" :class="[$vuetify.breakpoint.xs ? 'display-3 thin' : 'display-4']">Fair Street</h1>
+                        <h5 class="hidden-xs-only display-1 mt-5">6 Bedrooms, near the city centre.</h5>
                       </div>
                     </div>
                   </div>

@@ -9,7 +9,7 @@
     <v-container fluid grey lighten-3>
       <v-layout row wrap>
         <v-flex xs12 sm10 offset-sm1 md8 offset-md2>
-          <h1 class="display-4 page-header mt-5">{{ room.name }}</h1>
+          <h1 class="page-header mt-5" :class="[$vuetify.breakpoint.xs ? 'display-3 thin' : 'display-4']">{{ room.name }}</h1>
           <h4 class="display-1 page-header mt-2 mb-5">{{ room.houseName }}</h4>
           <div class="mt-3">
             <h5 class="headline thin">{{room.description}}</h5>

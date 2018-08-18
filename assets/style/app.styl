@@ -30,7 +30,6 @@
 .boxy
   background-color rgba(145, 185, 164, 0.5)
   border-radius 10px
-  padding 40px 60px
   opacity 1
   transform translateX(0%)
   box-shadow 5px 5px 10px 0px rgba(0,0,0,0.75)
@@ -40,6 +39,11 @@
     transform translateX(200%)
     pointer-events none
     box-shadow none
+
+.ht-cont
+  padding 40px 60px
+  &.small
+    padding 40px 20px
 
 .services-title
   opacity 1
@@ -111,6 +115,8 @@
   padding: 20px;
   top 10%
   left 10%
+  &.small
+    left 0%
 
 .prop-card-container:hover .card-overlay
   opacity 0
