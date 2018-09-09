@@ -5,7 +5,6 @@ general:
 - fix transition between home page and rest of the app
 - add make an enquiry area to the bottom of the property and room pages
 - optimise for SEO
-- set favicon
 
 homepage:
 - update property image and text for Our Properties

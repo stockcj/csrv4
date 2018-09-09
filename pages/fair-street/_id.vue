@@ -35,6 +35,7 @@ export default {
           cost: pageRoom.fields.cost,
           houseId: pageRoom.fields.houseId,
           houseName: pageRoom.fields.houseName,
+          houseRoute: 'fair-street',
           images: images,
           titleImage: 'https:' + pageRoom.fields.titleImage.fields.file.url
         }
