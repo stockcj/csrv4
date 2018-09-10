@@ -97,7 +97,7 @@
 .prop-card-container
   position relative
 
-.card-overlay
+.card-overlay, .card-underlay
   position absolute
   top 0
   bottom 0
@@ -105,21 +105,31 @@
   right 0
   height 100%
   width 100%
-  opacity .5
   transition .5s ease
+
+.card-overlay
+  opacity 0.5
   background-color #ddd
+
+.card-underlay
+  opacity 0
+
+.overlay-text, .underlay-text
+  padding: 50px;
+  &.small
+    padding 20px
 
 .overlay-text
   color black
-  position absolute
-  padding: 20px;
-  top 10%
-  left 10%
-  &.small
-    left 0%
+
+.underlay-text
+  color white
 
 .prop-card-container:hover .card-overlay
   opacity 0
+
+.prop-card-container:hover .card-underlay
+  opacity 1
 
 .prop-carousel 
     height 600px

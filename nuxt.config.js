@@ -21,6 +21,8 @@ module.exports = {
         crossorigin: 'anonymous'}
     ]
   },
+  transition: 'page',
+  layoutTransition: 'layout',
   plugins: [
     '~/plugins/vuetify.js',
     '~/plugins/vue-scrollmonitor.js'

@@ -1,6 +1,6 @@
 <template>
   <div>
-    <v-layout class="hero-style" id="coronationStreet" column align-center>
+    <v-layout :style="[heroStyle, {backgroundImage: 'url(' + property.images[0] + ')'}]" column align-center>
       <v-flex xs12>
         <img src="/csrlogo1.svg" alt="Cambridge Serviced Rooms" class="mt-5 mb-5 hidden-sm-and-up" style="height:200px;"/>
         <img src="/csrlogo1.svg" alt="Cambridge Serviced Rooms" class="mt-5 mb-5 hidden-xs-only" style="height:400px;"/>
@@ -10,12 +10,13 @@
       <v-layout column class="mt-3">
         <v-flex xs12 sm10 offset-sm1 md8 offset-md2>
           <h1 class="page-header mt-5" :class="[$vuetify.breakpoint.xs ? 'display-3 thin' : 'display-4']">Coronation Street</h1>
-          <h3 class="thin mt-5 mb-5" :class="[$vuetify.breakpoint.xs ? 'display-1' : 'display-2']">It’s peaceful environment, and location, make it an ideal base for either working from home, or working in, or just visiting the city.</h3>
+          <h3 class="thin mt-5 mb-5" :class="[$vuetify.breakpoint.xs ? 'display-1' : 'display-2']">It’s peaceful environment, and location, make it an ideal base for either working from home, or working in or around the city.</h3>
           <hr>
         </v-flex>
         <v-flex xs12 sm10 offset-sm1 md8 offset-md2>
           <h2 class="page-header mt-5" :class="[$vuetify.breakpoint.xs ? 'display-2' : 'display-3']">The Property</h2>
-          <h5 class="headline thin mt-2 mb-5">The house has been newly renovated and finished to a high standard. With light communal spaces, and comfortable private rooms, it's the perfect place to rest or work.</h5>
+          <h5 class="headline thin mt-2 mb-5">61 Coronation Street has been recently renovated and finished to a high standard. With light communal spaces, and comfortable private rooms, it's the perfect place to rest or work.</h5>
+          <h5 class="headline thin mt-2 mb-5">The property provides guests with super-fast unlimited cable broadband, lovely fully equipped kitchen and dining room for self-catering, with individual fridge & food storage space. The utility area is equipped with a washing machine and tumble dryer, and the very private courtyard garden has space for bicycle storage.</h5>
         </v-flex>
         <v-flex xs12 sm10 offset-sm1 md8 offset-md2 class="mb-5">
           <v-container grid-list-xl>
@@ -29,7 +30,7 @@
         </v-flex>
         <v-flex xs12 sm10 offset-sm1 md8 offset-md2>
           <h2 class="page-header mt-5" :class="[$vuetify.breakpoint.xs ? 'display-2' : 'display-3']">Central Location</h2>
-          <h5 class="headline thin mt-2">Coronation Street is in an ideal location for those visiting the City. The luxury serviced rooms are a mere 10-minute walk from the historic city centre and all that Cambridge has to offer.</h5>
+          <h5 class="headline thin mt-2">61 Coronation street is situated on a quiet side street just of Hills Road, and is less than a 10-minute walk from both City Centre and the train station.</h5>
         </v-flex>
         <v-flex xs12 sm10 offset-sm1 md8 offset-md2>
           <v-container grid-list-xl>
@@ -104,15 +105,22 @@ export default {
         })
       }
     })
-    return { property, rooms }
+    return {
+      property,
+      rooms,
+      heroStyle: {
+        backgroundPosition: 'center',
+        backgroundSize: 'cover',
+        height: 'auto',
+        width: 'auto',
+        maxWidth: '100%'
+      }
+    }
   }
 }
 </script>
 
 <style>
-  #coronationStreet {
-    background-image: url('/lg2.jpg');
-  }
   .carousel--small {
     height: 300px;
   }

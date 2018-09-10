@@ -2,13 +2,11 @@ csr tasks
 
 general:
 - create footer
-- fix transition between home page and rest of the app
 - add make an enquiry area to the bottom of the property and room pages
 - optimise for SEO
 
 homepage:
 - update property image and text for Our Properties
-- add a mouse-over animation to property images that moves property name to bottom
 
 Reviews:
 - Done
@@ -24,7 +22,4 @@ Coronation Street:
 
 Room pages:
 - make sure hero images are right
-- add back to property link from room pages
-
-
 
