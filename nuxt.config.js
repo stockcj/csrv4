@@ -5,17 +5,24 @@ module.exports = {
   ** Headers of the page
   */
   head: {
-    title: 'csrv4',
+    title: 'Cambridge Serviced Rooms',
     meta: [
       { charset: 'utf-8' },
-      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: 'Nuxt.js + Vuetify.js project' }
+      { name: 'viewport', content: 'width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui' },
+      { hid: 'description', name: 'description', content: 'Cambridge Serviced Rooms offers luxurious shared accomodation in the heart of Cambridge. Perfect for studying, or working in the city.' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons' }
+      { rel: 'icon', type: 'image/x-icon', href: '/csr.ico' },
+      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons' },
+      { rel: 'canonical', href: 'http://cambridgeservicedrooms.com/' }
+    ],
+    script: [
+      { src: 'https://use.fontawesome.com/releases/v5.0.13/js/all.js', integrity: 'sha384-xymdQtn1n3lH2wcu0qhcdaOpQwyoarkgLVxC/wZ5q7h9gHtxICrpcaSUfygqZGOe',
+        crossorigin: 'anonymous'}
     ]
   },
+  transition: 'page',
+  layoutTransition: 'layout',
   plugins: [
     '~/plugins/vuetify.js',
     '~/plugins/vue-scrollmonitor.js'
@@ -32,9 +39,12 @@ module.exports = {
       '/coronation-street/duckworth',
       '/coronation-street/tanner',
       '/coronation-street/tilsley',
-      '/fair-street/alpha',
-      '/fair-street/bravo',
-      '/fair-street/charlie',
+      '/fair-street/may',
+      '/fair-street/midsummer',
+      '/fair-street/reach',
+      '/fair-street/stourbridge',
+      '/fair-street/strawberry',
+      '/fair-street/winter',
       '/thanks',
       '/reviews',
       '/contact'

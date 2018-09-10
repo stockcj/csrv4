@@ -24,7 +24,7 @@ export default {
         const images = []
         if (pageRoom.fields.images) {
           for (const img of pageRoom.fields.images) {
-            images.push('http:' + img.fields.file.url)
+            images.push('https:' + img.fields.file.url)
           }
         }
         room = {
@@ -35,6 +35,7 @@ export default {
           cost: pageRoom.fields.cost,
           houseId: pageRoom.fields.houseId,
           houseName: pageRoom.fields.houseName,
+          houseRoute: 'coronation-street',
           images: images,
           titleImage: 'https:' + pageRoom.fields.titleImage.fields.file.url
         }

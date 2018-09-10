@@ -9,8 +9,8 @@
     <v-container fluid grey lighten-3>
       <v-layout row wrap>
         <v-flex xs12 sm10 offset-sm1 md8 offset-md2>
-          <h1 class="display-4 page-header mt-5">Contact Us</h1>
-          <h3 class="display-2 thin mt-5 mb-5">If you think you might like to stay with us, great! You can send us an enquiry by submitting the form below.</h3>
+          <h1 class="page-header mt-5" :class="[$vuetify.breakpoint.xs ? 'display-3 thin' : 'display-4']">Contact Us</h1>
+          <h3 class="thin mt-5 mb-5" :class="[$vuetify.breakpoint.xs ? 'display-1' : 'display-2']">If you think you might like to stay with us, great! You can send us an enquiry by submitting the form below.</h3>
         </v-flex>
         <v-flex xs12 sm10 offset-sm1 md8 offset-md2 class="mt-5">
           <v-card id="contactCard" class="mb-5">

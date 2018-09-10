@@ -9,8 +9,8 @@
     <v-container fluid grey lighten-3>
       <v-layout>
         <v-flex xs12 sm10 offset-sm1 md8 offset-md2>
-          <h1 class="display-4 page-header mt-5">Reviews</h1>
-          <h3 class="display-2 thin mt-5 mb-5">Read some of the things our lovely guests have had to say about Cambridge Serviced Rooms.</h3>
+          <h1 class="page-header mt-5" :class="[$vuetify.breakpoint.xs ? 'display-3 thin' : 'display-4']">Reviews</h1>
+          <h3 class="thin mt-5 mb-5" :class="[$vuetify.breakpoint.xs ? 'display-1' : 'display-2']">Read some of the things our lovely guests have had to say about Cambridge Serviced Rooms.</h3>
           <v-layout row wrap class="mb-5">
             <v-flex xs12 class="mt-5" v-for="review in reviews" :key="review.id">
               <h5 class="headline thin">

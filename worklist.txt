@@ -1,0 +1,25 @@
+csr tasks
+
+general:
+- create footer
+- add make an enquiry area to the bottom of the property and room pages
+- optimise for SEO
+
+homepage:
+- update property image and text for Our Properties
+
+Reviews:
+- Done
+
+Contact Us:
+- Update hero image
+- add preferred property to contact form
+
+Coronation Street:
+- update hero image
+- update strap line
+- add images to carousel
+
+Room pages:
+- make sure hero images are right
+

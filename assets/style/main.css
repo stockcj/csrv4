@@ -4,6 +4,12 @@
 .page-enter, .page-leave-to {
   opacity: 0;
 }
+.layout-enter-active, .layout-leave-active {
+  transition: opacity .5s;
+}
+.layout-enter, .layout-leave-to {
+  opacity: 0;
+}
 .primary-layout {
   background: url(~static/slant.svg)50% 0;
   background-size: 100%;

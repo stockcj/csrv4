@@ -7,10 +7,10 @@
       </v-flex>
     </v-layout>
     <v-container fluid grey lighten-3>
-      <v-layout row wrap>
-        <v-flex xs12 sm10 offset-sm1 md8 offset-md2>
-          <h1 class="display-4 page-header mt-5">{{ room.name }}</h1>
-          <h4 class="display-1 page-header mt-2 mb-5">{{ room.houseName }}</h4>
+      <v-layout row wrap align-center justify-center>
+        <v-flex xs12 sm10 md8>
+          <h1 class="page-header mt-5" :class="[$vuetify.breakpoint.xs ? 'display-3 thin' : 'display-4']">{{ room.name }}</h1>
+          <router-link class="room-title" :to="{ path: '/' + room.houseRoute }"><h4 class="display-1 page-header mt-2 mb-5">{{ room.houseName }}</h4></router-link>
           <div class="mt-3">
             <h5 class="headline thin">{{room.description}}</h5>
             <h5 class="headline text-xs-right mt-2">From £{{room.cost}} per week</h5>
@@ -21,8 +21,8 @@
             </v-chip>
           </div>
         </v-flex>
-        <v-flex xs12 sm10 offset-sm1 md8 offset-md2 class="mb-5">
-          <v-carousel hide-delimiters :class="[$vuetify.breakpoint.xs ? 'carousel--small' : '']">
+        <v-flex xs12 sm10 md8 class="mb-5">
+          <v-carousel class="prop-carousel" hide-delimiters :class="[$vuetify.breakpoint.xs ? 'carousel--small' : '']">
             <v-carousel-item v-for="(img,i) in room.images" v-bind:src="img" :key="i"></v-carousel-item>
           </v-carousel>
         </v-flex>
@@ -50,7 +50,16 @@ export default {
 </script>
 
 <style>
+  .carousel {
+    max-width: 900px;
+  }
   .carousel--small {
     height: 300px;
+  }
+  .room-title {
+    text-decoration: none;
+  }
+  .room-title h4 {
+    padding-left: 5px;
   }
 </style>

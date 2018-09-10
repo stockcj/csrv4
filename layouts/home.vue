@@ -44,7 +44,7 @@
           </v-flex>
           <v-flex>
             <v-menu bottom offset-y>
-              <v-btn large dark flat slot="activator">Properties</v-btn>
+              <v-btn :small="$vuetify.breakpoint.xs" :large="$vuetify.breakpoint.smAndUp" dark outline slot="activator">Properties</v-btn>
               <v-list>
                 <v-list-tile router :to="'/coronation-street'">
                   <v-list-tile-title>Coronation Street</v-list-tile-title>
@@ -54,8 +54,8 @@
                 </v-list-tile>
               </v-list>
             </v-menu>
-            <v-btn large dark flat to="/reviews">Reviews</v-btn>
-            <v-btn large dark flat to="/contact">Contact Us</v-btn>
+            <v-btn :small="$vuetify.breakpoint.xs" :large="$vuetify.breakpoint.smAndUp" dark outline to="/reviews">Reviews</v-btn>
+            <v-btn :small="$vuetify.breakpoint.xs" :large="$vuetify.breakpoint.smAndUp" dark outline to="/contact">Contact Us</v-btn>
           </v-flex>
         </v-layout>
     </v-parallax>
