@@ -79,7 +79,7 @@ export default {
     const images = []
     if (rawProperty.fields.images) {
       for (const img of rawProperty.fields.images) {
-        images.push('http:' + img.fields.file.url)
+        images.push('https:' + img.fields.file.url)
       }
     }
     const property = {
@@ -93,7 +93,7 @@ export default {
       if (room.fields.houseName === property.name) {
         if (room.fields.images) {
           for (const img of room.fields.images) {
-            rImages.push('http:' + img.fields.file.url)
+            rImages.push('https:' + img.fields.file.url)
           }
         }
         rooms.push({

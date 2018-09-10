@@ -54,7 +54,7 @@
                   <router-link :to="'coronation-street'">
                     <div class="prop-card-container">
                       <v-card flat class="prop-card">
-                        <v-card-media src="http://images.ctfassets.net/kgtv9xl00xvv/2jcquMwaj6ggWI0cqyEsii/b203c8db31d0f38507e527effc249e52/ext2.jpg" :height="height"></v-card-media>
+                        <v-card-media src="https://images.ctfassets.net/kgtv9xl00xvv/2jcquMwaj6ggWI0cqyEsii/b203c8db31d0f38507e527effc249e52/ext2.jpg" :height="height"></v-card-media>
                       </v-card>
                       <v-layout class="card-overlay">
                         <v-flex :class="[$vuetify.breakpoint.xs ? 'overlay-text small' : 'overlay-text']">
@@ -74,7 +74,7 @@
                   <router-link :to="'fair-street'">
                     <div class="prop-card-container">
                       <v-card flat class="prop-card">
-                        <v-card-media src="http://images.ctfassets.net/kgtv9xl00xvv/159gtnrRHgcYKWs8YYeQiG/3722b316144b5733de5b760c17e34b41/one.jpg" :height="height"></v-card-media>
+                        <v-card-media src="https://images.ctfassets.net/kgtv9xl00xvv/159gtnrRHgcYKWs8YYeQiG/3722b316144b5733de5b760c17e34b41/one.jpg" :height="height"></v-card-media>
                       </v-card>
                       <v-layout row wrap class="card-overlay">
                         <v-flex :class="[$vuetify.breakpoint.xs ? 'overlay-text small' : 'overlay-text']">
