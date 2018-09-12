@@ -16,28 +16,28 @@
   "license": "MIT",
   "dependencies": {
     "animated-vue": "^0.5.3",
-    "contentful": "^4.6.1",
+    "contentful": "^4.6.5",
     "nuxt": "^1.4.2",
-    "vue": "^2.5.3",
+    "vue": "^2.5.17",
     "vue-scrollmonitor": "0.0.2",
-    "vue-server-renderer": "^2.5.2",
-    "vue-template-compiler": "^2.5.2",
-    "vuetify": "^0.17.0",
-    "vuex-persistedstate": "^2.4.2"
+    "vue-server-renderer": "^2.5.17",
+    "vue-template-compiler": "^2.5.17",
+    "vuetify": "^0.17.7",
+    "vuex-persistedstate": "^2.5.4"
   },
   "devDependencies": {
     "babel-eslint": "^7.2.3",
-    "babel-preset-env": "^1.6.1",
     "babel-plugin-transform-runtime": "^6.23.0",
-    "eslint": "^4.3.0",
+    "babel-preset-env": "^1.7.0",
+    "eslint": "^4.19.1",
     "eslint-config-standard": "^10.2.1",
     "eslint-loader": "^1.9.0",
-    "eslint-plugin-html": "^3.1.1",
-    "eslint-plugin-import": "^2.7.0",
-    "eslint-plugin-node": "^5.1.1",
-    "eslint-plugin-promise": "^3.5.0",
-    "eslint-plugin-standard": "^3.0.1",
+    "eslint-plugin-html": "^3.2.2",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-node": "^5.2.1",
+    "eslint-plugin-promise": "^3.8.0",
+    "eslint-plugin-standard": "^3.1.0",
     "stylus": "^0.54.5",
-    "stylus-loader": "^3.0.1"
+    "stylus-loader": "^3.0.2"
   }
 }
