@@ -147,7 +147,6 @@
     methods: {
       updateScrollState (state) {
         this.state = state
-        console.log(state)
       }
     }
   }
