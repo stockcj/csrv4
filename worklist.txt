@@ -2,11 +2,7 @@ csr tasks
 
 general:
 - create footer
-- add make an enquiry area to the bottom of the property and room pages
 - add google analytics
-
-homepage:
-- update property image and text for Our Properties
 
 Contact Us:
 - Update hero image
@@ -14,8 +10,6 @@ Contact Us:
 
 Coronation Street:
 - update hero image
-- update strap line
-- add images to carousel
 
 Room pages:
 - make sure hero images are right
