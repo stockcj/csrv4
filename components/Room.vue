@@ -30,6 +30,7 @@
     </v-container>
     <v-fab-transition>
       <v-btn
+        to="/contact"
         fixed
         bottom
         right
