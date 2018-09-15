@@ -118,6 +118,14 @@ export default {
       modal1: false,
       modal2: false
     }
+  },
+  head () {
+    return {
+      title: 'Cambridge Serviced Rooms - Contact',
+      meta: [
+        { hid: 'description', name: 'description', content: 'Contact us about staying with Cambridge Serviced Rooms'}
+      ]
+    }
   }
 }
 </script>

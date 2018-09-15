@@ -57,6 +57,14 @@ export default {
         return ({'small': true})
       }
     }
+  },
+  head () {
+    return {
+      title: 'Cambridge Serviced Rooms - Reviews',
+      meta: [
+        { hid: 'description', name: 'description', content: 'Read reviews from some of the lovely people who have stayed with Cambridge Serviced Rooms.'}
+      ]
+    }
   }
 }
 </script>

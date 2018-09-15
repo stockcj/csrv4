@@ -57,6 +57,11 @@ import {createClient} from '~/plugins/contentful.js'
 const client = createClient()
 
 export default {
+  head () {
+    return {
+      title: 'Cambridge Serviced Rooms - Coronation Street'
+    }
+  },
   components: {
     Property
   },
