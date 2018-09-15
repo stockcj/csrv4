@@ -123,7 +123,7 @@ export default {
     return {
       title: 'Cambridge Serviced Rooms - Contact',
       meta: [
-        { hid: 'description', name: 'description', content: 'Contact us about staying with Cambridge Serviced Rooms'}
+        { hid: 'description', name: 'description', content: 'Contact us about staying with Cambridge Serviced Rooms' }
       ]
     }
   }

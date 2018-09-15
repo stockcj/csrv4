@@ -1,6 +1,6 @@
 <template>
   <div>
-    <v-layout class="hero-style" id="reviews" column align-center>
+    <v-layout class="hero-style" id="reviews" column align-center v-scroll="onScroll">
       <v-flex xs12>
         <img src="/csrlogo1.svg" alt="Cambridge Serviced Rooms" class="mt-5 mb-5 hidden-sm-and-up" style="height:200px;"/>
         <img src="/csrlogo1.svg" alt="Cambridge Serviced Rooms" class="mt-5 mb-5 hidden-xs-only" style="height:400px;"/>
@@ -25,6 +25,18 @@
         </v-flex>
       </v-layout>
     </v-container>
+    <v-fab-transition>
+      <v-btn
+        fixed
+        bottom
+        right
+        round
+        color="camblue"
+        v-show="!hidden"
+      >
+        Contact Us
+      </v-btn>
+    </v-fab-transition>
   </div>
 </template>
 
@@ -34,6 +46,12 @@ import {createClient} from '~/plugins/contentful.js'
 const client = createClient()
 
 export default {
+  data () {
+    return {
+      offSetTop: 0,
+      hidden: true
+    }
+  },
   async asyncData ({env}) {
     let data = await client.getEntries({
       'content_type': 'review',
@@ -58,11 +76,21 @@ export default {
       }
     }
   },
+  methods: {
+    onScroll (e) {
+      this.offSetTop = window.pageYOffset || document.documentElement.scrollTop
+      if (this.offSetTop > 200) {
+        this.hidden = false
+      } else {
+        this.hidden = true
+      }
+    }
+  },
   head () {
     return {
       title: 'Cambridge Serviced Rooms - Reviews',
       meta: [
-        { hid: 'description', name: 'description', content: 'Read reviews from some of the lovely people who have stayed with Cambridge Serviced Rooms.'}
+        { hid: 'description', name: 'description', content: 'Read reviews from some of the lovely people who have stayed with Cambridge Serviced Rooms.' }
       ]
     }
   }

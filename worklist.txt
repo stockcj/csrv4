@@ -3,7 +3,6 @@ csr tasks
 general:
 - create footer
 - add make an enquiry area to the bottom of the property and room pages
-- optimise for SEO
 - add google analytics
 
 homepage:

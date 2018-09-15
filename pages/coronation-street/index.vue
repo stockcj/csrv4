@@ -1,6 +1,6 @@
 <template>
   <div>
-    <v-layout :style="[heroStyle, {backgroundImage: 'url(' + property.images[0] + ')'}]" column align-center>
+    <v-layout :style="[heroStyle, {backgroundImage: 'url(' + property.images[0] + ')'}]" column align-center v-scroll="onScroll">
       <v-flex xs12>
         <img src="/csrlogo1.svg" alt="Cambridge Serviced Rooms" class="mt-5 mb-5 hidden-sm-and-up" style="height:200px;"/>
         <img src="/csrlogo1.svg" alt="Cambridge Serviced Rooms" class="mt-5 mb-5 hidden-xs-only" style="height:400px;"/>
@@ -47,6 +47,18 @@
       </v-layout>
       <property :rooms="rooms"/>
     </v-container>
+    <v-fab-transition>
+      <v-btn
+        fixed
+        bottom
+        right
+        round
+        color="camblue"
+        v-show="!hidden"
+      >
+        Contact Us
+      </v-btn>
+    </v-fab-transition>
   </div>
 </template>
 
@@ -57,6 +69,12 @@ import {createClient} from '~/plugins/contentful.js'
 const client = createClient()
 
 export default {
+  data () {
+    return {
+      offSetTop: 0,
+      hidden: true
+    }
+  },
   head () {
     return {
       title: 'Cambridge Serviced Rooms - Coronation Street'
@@ -71,6 +89,16 @@ export default {
         return (300)
       } else {
         return (500)
+      }
+    }
+  },
+  methods: {
+    onScroll (e) {
+      this.offSetTop = window.pageYOffset || document.documentElement.scrollTop
+      if (this.offSetTop > 200) {
+        this.hidden = false
+      } else {
+        this.hidden = true
       }
     }
   },

@@ -1,6 +1,6 @@
 <template>
   <div>
-    <v-layout :style="[heroStyle, {backgroundImage: 'url(' + room.titleImage + ')'}]" column align-center>
+    <v-layout :style="[heroStyle, {backgroundImage: 'url(' + room.titleImage + ')'}]" column align-center v-scroll="onScroll">
       <v-flex xs12>
         <img src="/csrlogo1.svg" alt="Cambridge Serviced Rooms" class="mt-5 mb-5 hidden-sm-and-up" style="height:200px;"/>
         <img src="/csrlogo1.svg" alt="Cambridge Serviced Rooms" class="mt-5 mb-5 hidden-xs-only" style="height:400px;"/>
@@ -28,6 +28,18 @@
         </v-flex>
       </v-layout>
     </v-container>
+    <v-fab-transition>
+      <v-btn
+        fixed
+        bottom
+        right
+        round
+        color="camblue"
+        v-show="!hidden"
+      >
+        Contact Us
+      </v-btn>
+    </v-fab-transition>
   </div>
 </template>
 
@@ -41,11 +53,23 @@ export default {
         height: 'auto',
         width: 'auto',
         maxWidth: '100%'
-      }
+      },
+      offSetTop: 0,
+      hidden: true
     }
   },
   name: 'room',
-  props: ['room']
+  props: ['room'],
+  methods: {
+    onScroll (e) {
+      this.offSetTop = window.pageYOffset || document.documentElement.scrollTop
+      if (this.offSetTop > 200) {
+        this.hidden = false
+      } else {
+        this.hidden = true
+      }
+    }
+  }
 }
 </script>
 

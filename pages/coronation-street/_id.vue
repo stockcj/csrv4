@@ -11,7 +11,6 @@ const client = createClient()
 
 export default {
   head () {
-    let room = this.room;
     return {
       title: 'Cambridge Serviced Rooms - Coronation Street'
     }
