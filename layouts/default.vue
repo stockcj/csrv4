@@ -17,7 +17,7 @@
       </v-list>
     </v-navigation-drawer>
     <v-toolbar fixed app class="camblue">
-      <img src="/csrlogo1_icon.svg" alt="Cambridge Serviced Rooms" style="height:48px;"/>
+      <img src="/csrlogo_black.svg" alt="Cambridge Serviced Rooms" style="height:48px;"/>
       <v-toolbar-title><nuxt-link tag="span" style="cursor: pointer" to="/">{{title}}</nuxt-link></v-toolbar-title>
       <v-spacer></v-spacer>
       <v-toolbar-items class="hidden-sm-and-down">
@@ -40,13 +40,12 @@
     <v-content>
       <nuxt />
     </v-content>
-    <v-footer app class="camblue">
-      <span>&copy; 2017</span>
-    </v-footer>
+    <Footer />
   </v-app>
 </template>
 
 <script>
+  import Footer from '~/components/Footer.vue'
   export default {
     data () {
       return {
@@ -60,6 +59,9 @@
         ],
         title: 'Cambridge Serviced Rooms'
       }
+    },
+    components: {
+      Footer
     }
   }
 </script>

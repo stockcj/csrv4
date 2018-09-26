@@ -17,7 +17,7 @@
       </v-list>
     </v-navigation-drawer>
     <v-toolbar app color="camblue" :class="[toolbar ? 'toolbar--home' : 'hidden']" fixed>
-      <img src="/csrlogo1_icon.svg" alt="Cambridge Serviced Rooms" style="height:48px;"/>
+      <img src="/csrlogo_black.svg" alt="Cambridge Serviced Rooms" style="height:48px;"/>
       <v-spacer></v-spacer>
       <v-toolbar-items class="hidden-sm-and-down">
         <v-menu bottom offset-y>
@@ -62,13 +62,12 @@
     <v-content class="home" style="background-color: #eee;">
       <nuxt />
     </v-content>
-    <v-footer app class="camblue_darken">
-      <span>&copy; 2017</span>
-    </v-footer>
+    <Footer />
   </v-app>
 </template>
 
 <script>
+  import Footer from '~/components/Footer.vue'
   export default {
     data () {
       return {
@@ -94,6 +93,9 @@
       onScroll () {
         this.toolbar = window.scrollY > 400
       }
+    },
+    components: {
+      Footer
     }
   }
 </script>
