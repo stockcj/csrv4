@@ -133,6 +133,6 @@ export default {
 
 <style>
   #contactUs {
-    background-image: url('/lg2.jpg');
+    background-image: url('/ext9.jpg');
   }
 </style>

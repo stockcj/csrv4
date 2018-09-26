@@ -1,6 +1,6 @@
 <template>
   <div>
-    <v-layout :style="[heroStyle, {backgroundImage: 'url(' + property.images[0] + ')'}]" column align-center v-scroll="onScroll">
+    <v-layout :style="[heroStyle, {backgroundImage: 'url(' + property.titleImage + ')'}]" column align-center v-scroll="onScroll">
       <v-flex xs12>
         <img src="/csrlogo1.svg" alt="Cambridge Serviced Rooms" class="mt-5 mb-5 hidden-sm-and-up" style="height:200px;"/>
         <img src="/csrlogo1.svg" alt="Cambridge Serviced Rooms" class="mt-5 mb-5 hidden-xs-only" style="height:400px;"/>
@@ -119,6 +119,7 @@ export default {
     const property = {
       id: rawProperty.fields.id,
       name: rawProperty.fields.name,
+      titleImage: 'https:' + rawProperty.fields.titleImage.fields.file.url,
       images: images
     }
     const rooms = []

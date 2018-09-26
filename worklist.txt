@@ -3,6 +3,8 @@ csr tasks
 general:
 - create footer
 - add google analytics
+- Reduce margin to title on mobile
+- Remove site title from banner on mobile
 
 Contact Us:
 - Update hero image
@@ -11,6 +13,15 @@ Contact Us:
 Coronation Street:
 - update hero image
 
+Homepage:
+
+
 Room pages:
 - make sure hero images are right
+- make property link default to Stunning Rooms section.
 
+Reviews:
+- pull out reviews from old site and send to A & S
+
+Duckworth
+- swap photos with new ones

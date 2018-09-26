@@ -10,7 +10,3 @@
 .layout-enter, .layout-leave-to {
   opacity: 0;
 }
-.primary-layout {
-  background: url(~static/slant.svg)50% 0;
-  background-size: 100%;
-}
