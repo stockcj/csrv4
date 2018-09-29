@@ -18,17 +18,14 @@ module.exports = {
       { rel: 'icon', type: 'image/x-icon', href: '/csr.ico' },
       { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons' },
       { rel: 'canonical', href: 'http://cambridgeservicedrooms.com/' }
-    ],
-    script: [
-      { src: 'https://use.fontawesome.com/releases/v5.0.13/js/all.js', integrity: 'sha384-xymdQtn1n3lH2wcu0qhcdaOpQwyoarkgLVxC/wZ5q7h9gHtxICrpcaSUfygqZGOe',
-        crossorigin: 'anonymous'}
     ]
   },
   transition: 'page',
   layoutTransition: 'layout',
   plugins: [
     '~/plugins/vuetify.js',
-    '~/plugins/vue-scrollmonitor.js'
+    '~/plugins/vue-scrollmonitor.js',
+    '~/plugins/font-awesome.js'
   ],
   css: [
     '~/assets/style/app.styl',
