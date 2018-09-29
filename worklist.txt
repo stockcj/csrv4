@@ -5,6 +5,7 @@ general:
 - add google analytics
 - Reduce margin to title on mobile
 - Remove site title from banner on mobile
+- serve smaller images on smaller resolutions (add mobile image to contentful)
 
 Contact Us:
 - Update hero image

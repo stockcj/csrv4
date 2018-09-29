@@ -107,17 +107,3 @@ export default {
     margin-top: 15px;
   }
 </style>
-
-loadReviews ({commit}) {
-        client.getEntries({
-          'content_type': 'review',
-          'order': 'fields.id'
-        })
-          .then((data) => {
-            const reviews = []
-            data.items.forEach((review) => {
-              reviews.push(review.fields)
-            })
-            commit('setReviews', reviews)
-          })
-      }
