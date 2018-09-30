@@ -10,10 +10,12 @@
       <v-layout row wrap align-center justify-center>
         <v-flex xs12 sm10 md8>
           <h1 class="page-header mt-5" :class="[$vuetify.breakpoint.xs ? 'display-3 thin' : 'display-4']">{{ room.name }}</h1>
-          <router-link class="room-title" :to="{ path: '/' + room.houseRoute }"><h4 class="display-1 page-header mt-2 mb-5">{{ room.houseName }}</h4></router-link>
+          <router-link class="room-title" :to="{ path: '/' + room.houseRoute + '#stunningRooms' }">
+            <h4 class="display-1 page-header mt-2 mb-5">{{ room.houseName }}</h4>
+          </router-link>
           <div class="mt-3">
             <h5 class="headline thin">{{room.description}}</h5>
-            <h5 class="headline text-xs-right mt-2">From £{{room.cost}} per week</h5>
+            <h5 class="headline text-xs-right mt-4">From £{{room.cost}} per week</h5>
           </div>
           <div class="text-xs-center mt-5 mb-5">
             <v-chip v-for="(feature, index) in room.features" :key="index" class="camblue">

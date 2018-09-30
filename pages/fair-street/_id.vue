@@ -29,7 +29,7 @@ export default {
         const images = []
         if (pageRoom.fields.images) {
           for (const img of pageRoom.fields.images) {
-            images.push('https:' + img.fields.file.url)
+            images.push('https:' + img.fields.file.url + '?w=800')
           }
         }
         room = {

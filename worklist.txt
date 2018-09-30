@@ -1,18 +1,12 @@
 csr tasks
 
 general:
-- create footer
 - add google analytics
 - Reduce margin to title on mobile
 - Remove site title from banner on mobile
 - serve smaller images on smaller resolutions (add mobile image to contentful)
 
 Contact Us:
-- Update hero image
-- add preferred property to contact form
-
-Coronation Street:
-- update hero image
 
 Homepage:
 
@@ -25,4 +19,3 @@ Reviews:
 - pull out reviews from old site and send to A & S
 
 Duckworth
-- swap photos with new ones

@@ -83,6 +83,15 @@
                     name="Number in Group"
                   ></v-text-field>
                 </v-flex>
+                <v-flex xs12 md5 offset-md1>
+                  <v-select
+                    :items="properties"
+                    label="Preferred Property"
+                    prepend-icon="home"
+                    single-line
+                    name="Preferred Property"
+                  ></v-select>
+                </v-flex>
                 <v-flex xs12>
                   <v-text-field
                     label="Additional Information"
@@ -116,7 +125,11 @@ export default {
       aDate: null,
       dDate: null,
       modal1: false,
-      modal2: false
+      modal2: false,
+      properties: [
+        { text: 'Coronation Street' },
+        { text: 'Fair Street' }
+      ]
     }
   },
   head () {

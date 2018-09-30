@@ -38,7 +38,7 @@
           </v-container>
         </v-flex>
         <v-flex  xs12 sm10 offset-sm1 md8 offset-md2>
-          <hr class="mt-5">
+          <hr id="stunningRooms" class="mt-5">
         </v-flex>
         <v-flex  xs12 sm10 offset-sm1 md8 offset-md2>
           <h2 class="page-header mt-5" :class="[$vuetify.breakpoint.xs ? 'display-2' : 'display-3']">Stunning rooms</h2>
@@ -113,7 +113,7 @@ export default {
     const images = []
     if (rawProperty.fields.images) {
       for (const img of rawProperty.fields.images) {
-        images.push('https:' + img.fields.file.url)
+        images.push('https:' + img.fields.file.url + '?w=800')
       }
     }
     const property = {
@@ -124,23 +124,12 @@ export default {
     }
     const rooms = []
     rData.items.forEach((room) => {
-      const rImages = []
       if (room.fields.houseName === property.name) {
-        if (room.fields.images) {
-          for (const img of room.fields.images) {
-            rImages.push('https:' + img.fields.file.url)
-          }
-        }
         rooms.push({
           id: room.fields.id,
           name: room.fields.name,
           features: room.fields.features,
-          description: room.fields.description,
-          cost: room.fields.cost,
-          houseId: room.fields.houseId,
-          houseName: room.fields.houseName,
-          images: images,
-          titleImage: 'https:' + room.fields.titleImage.fields.file.url
+          titleImage: 'https:' + room.fields.titleImage.fields.file.url + '?w=800'
         })
       }
     })
