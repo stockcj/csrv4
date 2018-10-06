@@ -5,7 +5,7 @@
         <v-flex xs12 sm10 offset-sm1 md8 offset-md2>
           <v-layout row wrap>
             <v-flex xs12 class="mb-5">
-              <h1 class="page-header text-xs-center" :class="[$vuetify.breakpoint.xs ? 'display-3 thin' : 'display-4']">Cambridge Serviced Rooms</h1>
+              <h1 class="page-header text-xs-center site-title" :class="[$vuetify.breakpoint.xs ? 'display-3 thin' : 'display-4']">Cambridge Serviced Rooms</h1>
               <h3 class="mt-5 text-xs-center" :class="[$vuetify.breakpoint.xs ? 'display-1' : 'display-2']"><span class="thin">We offer</span> fully serviced, centrally located, luxury accommodation<span class="thin"> in the city of Cambridge.</span></h3>
             </v-flex>
             <div id="services" class="mb-5">
@@ -155,3 +155,9 @@
     }
   }
 </script>
+<style>
+  .site-title {
+    margin-top: -40px;
+  }
+</style>
+

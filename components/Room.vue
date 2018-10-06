@@ -9,7 +9,7 @@
     <v-container fluid grey lighten-3>
       <v-layout row wrap align-center justify-center>
         <v-flex xs12 sm10 md8>
-          <h1 class="page-header mt-5" :class="[$vuetify.breakpoint.xs ? 'display-3 thin' : 'display-4']">{{ room.name }}</h1>
+          <h1 class="page-header" :class="[$vuetify.breakpoint.xs ? 'display-3 thin' : 'display-4 mt-5']">{{ room.name }}</h1>
           <router-link class="room-title" :to="{ path: '/' + room.houseRoute + '#stunningRooms' }">
             <h4 class="display-1 page-header mt-2 mb-5">{{ room.houseName }}</h4>
           </router-link>

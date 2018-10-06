@@ -9,7 +9,7 @@
     <v-container fluid grey lighten-3>
       <v-layout column class="mt-3">
         <v-flex xs12 sm10 offset-sm1 md8 offset-md2>
-          <h1 class="page-header mt-5" :class="[$vuetify.breakpoint.xs ? 'display-3 thin' : 'display-4']">Fair Street</h1>
+          <h1 class="page-header" :class="[$vuetify.breakpoint.xs ? 'display-3 thin' : 'display-4 mt-5']">Fair Street</h1>
           <h3 class="thin mt-5 mb-5" :class="[$vuetify.breakpoint.xs ? 'display-1' : 'display-2']">With its great location, No. 5 Fair Street is adjacent to Midsummer Common, and minutes from the historic City Centre. This property is perfect for visiting academics looking for a high quality, tranquil place to study and stay.</h3>
           <hr>
         </v-flex>

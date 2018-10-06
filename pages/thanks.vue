@@ -9,7 +9,7 @@
     <v-container fluid grey lighten-3>
       <v-layout row wrap>
         <v-flex xs12 sm10 offset-sm1 md8 offset-md2 class id="thanks">
-          <h1 class="page-header mt-5" :class="[$vuetify.breakpoint.xs ? 'display-3 thin' : 'display-4']">Thank you!</h1>
+          <h1 class="page-header" :class="[$vuetify.breakpoint.xs ? 'display-3 thin' : 'display-4 mt-5']">Thank you!</h1>
           <h3 class="thin mt-5 mb-5" :class="[$vuetify.breakpoint.xs ? 'display-1' : 'display-2']">Your request has been sent successfully.  We aim to respond to all enquiries within 24 hours. Speak soon!</h3>
         </v-flex>
       </v-layout>

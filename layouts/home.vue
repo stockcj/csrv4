@@ -1,8 +1,20 @@
 <template>
   <v-app light>
-    <v-navigation-drawer app right fixed temporary v-model="drawer">
+    <v-navigation-drawer app right fixed temporary dark v-model="drawer" class="camblue">
+      <v-toolbar flat class="camblue">
+        <v-list>
+          <v-list-tile>
+            <v-list-tile-title class="title">
+              Menu
+            </v-list-tile-title>
+          </v-list-tile>
+        </v-list>
+      </v-toolbar>
+
+      <v-divider></v-divider>
+
       <v-list>
-        <v-list-tile
+        <v-list-tile class="nav-tile"
           v-for="(item, i) in items"
           :key="i"
           :to="item.to"
@@ -11,9 +23,10 @@
               <v-icon v-html="item.icon"></v-icon>
             </v-list-tile-action>
             <v-list-tile-content>
-              <v-list-tile-title v-text="item.title"></v-list-tile-title>
+              <v-list-tile-title style="font-size: 20px;" v-text="item.title"></v-list-tile-title>
             </v-list-tile-content>
           </v-list-tile>
+
       </v-list>
     </v-navigation-drawer>
     <v-toolbar app color="camblue" :class="[toolbar ? 'toolbar--home' : 'hidden']" fixed>
@@ -104,10 +117,7 @@
   .home {
     padding-top: 0px !important;
   }
-  .title-border {
-    height: 10px;
-    border-top: 1px solid white;
-    border-bottom: 1px solid white;
-    background-color:#476B78;
+  .nav-tile {
+    height: 65px;
   }
 </style>

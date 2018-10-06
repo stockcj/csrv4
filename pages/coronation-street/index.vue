@@ -9,7 +9,7 @@
     <v-container fluid grey lighten-3>
       <v-layout column class="mt-3">
         <v-flex xs12 sm10 offset-sm1 md8 offset-md2>
-          <h1 class="page-header mt-5" :class="[$vuetify.breakpoint.xs ? 'display-3 thin' : 'display-4']">Coronation Street</h1>
+          <h1 class="page-header" :class="[$vuetify.breakpoint.xs ? 'display-3 thin' : 'display-4 mt-5']">Coronation Street</h1>
           <h3 class="thin mt-5 mb-5" :class="[$vuetify.breakpoint.xs ? 'display-1' : 'display-2']">It’s peaceful environment, and location, make it an ideal base for either working from home, or working in or around the city.</h3>
           <hr>
         </v-flex>
