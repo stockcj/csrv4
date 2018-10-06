@@ -20,6 +20,11 @@ module.exports = {
       { rel: 'canonical', href: 'http://cambridgeservicedrooms.com/' }
     ]
   },
+  modules: [
+    ['@nuxtjs/google-analytics', {
+      id: 'UA-127031104-1'
+    }]
+  ],
   transition: 'page',
   layoutTransition: 'layout',
   plugins: [

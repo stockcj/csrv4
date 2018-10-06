@@ -37,12 +37,12 @@
       <v-toolbar-side-icon class="hidden-md-and-up" @click.stop="drawer = !drawer"></v-toolbar-side-icon>
     </v-toolbar>
     <v-parallax src="/backs.jpg" alt="cambridge-backs" style="height: auto;">
-        <v-layout column align-center>
+        <v-layout column align-center justify-center="">
           <v-flex xs12>
             <img src="/csrlogo1.svg" alt="Cambridge Serviced Rooms" class="mt-5 mb-5 hidden-sm-and-up" style="height:200px;"/>
             <img src="/csrlogo1.svg" alt="Cambridge Serviced Rooms" class="mt-5 mb-5 hidden-xs-only" style="height:400px;"/>
           </v-flex>
-          <v-flex>
+          <v-flex class="mb-5">
             <v-menu bottom offset-y>
               <v-btn :small="$vuetify.breakpoint.xs" :large="$vuetify.breakpoint.smAndUp" dark outline slot="activator">Properties</v-btn>
               <v-list>

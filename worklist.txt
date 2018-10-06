@@ -1,21 +1,20 @@
 csr tasks
 
 general:
-- add google analytics
 - Reduce margin to title on mobile
 - Remove site title from banner on mobile
 - serve smaller images on smaller resolutions (add mobile image to contentful)
 
 Contact Us:
 
+
 Homepage:
 
 
 Room pages:
 - make sure hero images are right
-- make property link default to Stunning Rooms section.
 
 Reviews:
-- pull out reviews from old site and send to A & S
+- add reviews to contentful
 
 Duckworth
