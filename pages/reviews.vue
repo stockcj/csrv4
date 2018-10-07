@@ -18,7 +18,7 @@
                 {{review.text}}
                 <span><v-icon v-bind="size">format_quote</v-icon></span>
               </h5>
-              <h5 class="headline mt-3">{{review.author}} ({{review.date}})</h5>
+              <h5 class="headline mt-3">{{review.author}}</h5>
               <v-divider></v-divider>
             </v-flex>
           </v-layout>
