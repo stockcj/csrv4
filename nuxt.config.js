@@ -23,8 +23,24 @@ module.exports = {
   modules: [
     ['@nuxtjs/google-analytics', {
       id: 'UA-127031104-1'
-    }]
+    }],
+    '@nuxtjs/sitemap'
   ],
+  sitemap: {
+    path: '/sitemap.xml',
+    hostname: 'https://cambridgeservicedrooms.com',
+    exclude: [
+      '/thanks'
+    ],
+    routes: [
+      '/coronation-street',
+      '/fair-street/may',
+      '/fair-street',
+      '/reviews',
+      '/contact'
+    ],
+    generate: true
+  },
   transition: 'page',
   layoutTransition: 'layout',
   plugins: [
