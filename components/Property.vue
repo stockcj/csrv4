@@ -19,7 +19,7 @@
               </v-card-title>
               <v-card-actions>
                 <v-spacer></v-spacer>
-                <v-btn flat large :to="$route.path + '/' + room.id" accent>See inside</v-btn>
+                <v-btn flat large :to="routePath + room.id" accent>See inside</v-btn>
               </v-card-actions>
             </v-card>
           </v-flex>
@@ -46,6 +46,13 @@ export default {
         return (400)
       } else {
         return (300)
+      }
+    },
+    routePath () {
+      if (window.location.pathname.slice(-1) !== '/') {
+        return window.location.pathname + '/'
+      } else {
+        return window.location.pathname
       }
     }
   }
